@@ -124,7 +124,7 @@ public class Scanner
 	public Token scan()
 	{
 		while( currentChar == '#' || currentChar == '\n' ||
-		       currentChar == '\r' || currentChar == '\t' ||
+		       currentChar == '\r' /* carriage return */ || currentChar == '\t' /* tab */ ||
 		       currentChar == ' ' )
 			scanSeparator();
 			

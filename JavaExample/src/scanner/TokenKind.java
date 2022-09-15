@@ -1,8 +1,3 @@
-/*
- * 23.08.2019 Original version
- */
-
-
 package scanner;
 
 
