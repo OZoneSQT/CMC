@@ -11,7 +11,8 @@ public class Scanner implements IScanner {
     private char currentChar;
     private StringBuffer currentSpelling = new StringBuffer();
 
-    public Scanner() {}
+    public Scanner() {
+    }
 
     @Override
     public void scanSource(SourceHandler source) {
@@ -20,22 +21,26 @@ public class Scanner implements IScanner {
     }
 
     private void takeIt() {
-        currentSpelling.append( currentChar );
+        currentSpelling.append(currentChar);
         currentChar = source.getSource();
     }
 
     /* Sort bu ASCII value */
-    private boolean isLetter( char c ) { return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z'; }
+    private boolean isLetter(char c) {
+        return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
+    }
 
     /* Sort bu ASCII value */
-    private boolean isDigit( char c ) { return c >= '0' && c <= '9'; }
+    private boolean isDigit(char c) {
+        return c >= '0' && c <= '9';
+    }
 
     private void scanSeparator() {
         /* Remove Comments */
-        if(currentChar == '#') {
+        if (currentChar == '#') {
             takeIt();
-            while( currentChar != SourceHandler.EOL && currentChar != SourceHandler.EOT ) takeIt();
-            if( currentChar == SourceHandler.EOL ) takeIt();
+            while (currentChar != SourceHandler.EOL && currentChar != SourceHandler.EOT) takeIt();
+            if (currentChar == SourceHandler.EOL) takeIt();
         }
 
         /* Escape character, split for tree */
@@ -48,35 +53,101 @@ public class Scanner implements IScanner {
             takeIt();
             while( isLetter( currentChar ) || isDigit( currentChar ) ) takeIt();
             return IDENTIFIER;
-        } else if (currentChar == '+' || currentChar == '-' || currentChar == '/' || currentChar == '*' || currentChar == '%' || currentChar == '^' || currentChar == '=') {
+        } else if( isDigit( currentChar ) ) {
             takeIt();
-            return OPERATOR;
-        } else if (currentChar == ',') { takeIt(); return COMMA; }
-        else if (currentChar == ';') { takeIt(); return SEMICOLON; }
-        else if (currentChar == '(') { takeIt(); return LEFTPARAN; }
-        else if (currentChar == ')') { takeIt(); return RIGHTPARAN; }
-        else if (currentChar == '[') { takeIt(); return LEFTSQPARAN; }
-        else if (currentChar == ']') { takeIt(); return RIGHTSQPARAN; }
-        else if (currentChar == '{') { takeIt(); return BEGINBLOCK; }
-        else if (currentChar == '}') { takeIt(); return ENDBLOCK; }
-        else if  (currentChar == '\"') { takeIt(); return SEPERATOR; } //TODO Is this right?
-        else if (currentChar == '\'') { takeIt(); return SEPERATOR; } //TODO Is this right?
-        else { takeIt(); return ERROR;  }
+            while( isDigit( currentChar ) ) takeIt();
+            return INTEGERLITERAL;
+        }
+
+        switch (currentChar) {
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+            case '%':
+            case '^':
+            case '=':
+                takeIt();
+                return OPERATOR;
+        /*
+            case ':':
+                takeIt();
+                if (currentChar == '=') {
+                    takeIt();
+                    return OPERATOR;
+                } else
+                    return ERROR;
+        */
+
+            case ',':
+                takeIt();
+                return COMMA;
+
+            case '.':
+                takeIt();
+                return DOT;
+
+            case ';':
+                takeIt();
+                return SEMICOLON;
+
+            case ':':
+                takeIt();
+                return COLON;
+
+            case '(':
+                takeIt();
+                return LEFTPARAN;
+
+            case ')':
+                takeIt();
+                return RIGHTPARAN;
+
+            case '[':
+                takeIt();
+                return LEFTSQPARAN;
+
+            case ']':
+                takeIt();
+                return RIGHTSQPARAN;
+
+            case '{':
+                takeIt();
+                return BEGINBLOCK;
+
+            case '}':
+                takeIt();
+                return ENDBLOCK;
+
+            case '\"':
+                takeIt();
+                return SEPERATOR;
+
+            case '\'':
+                takeIt();
+                return SEPERATOR;
+
+            case SourceHandler.EOT:
+                return EOT;
+
+            default:
+                takeIt();
+                return ERROR;
+        }
     }
 
     public Token scan() {
-        while( currentChar == '#' ||
+        while (currentChar == '#' ||
                 currentChar == '\n' ||
                 currentChar == '\r' /* carriage return */ ||
                 currentChar == '\t' /* tab */ ||
-                currentChar == ' ' )
+                currentChar == ' ')
             scanSeparator();
 
-        currentSpelling = new StringBuffer( "" );
-        EToken token = scanToken();
+        currentSpelling = new StringBuffer("");
+        EToken kind = scanToken();
 
-        return new Token( token, new String( currentSpelling ) );
+        return new Token(kind, new String(currentSpelling));
     }
 
 }
-

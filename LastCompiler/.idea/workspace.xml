@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/ETokens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/SourceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/SourceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/IScannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/IScannerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/CloudStation/Downloads/CMC-Java/JavaExample"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CloudStation/Downloads/CMC-Java/JavaExample&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -102,6 +101,7 @@
       <updated>1663409810533</updated>
       <workItem from="1663409811942" duration="155000" />
       <workItem from="1663410117078" duration="14441000" />
+      <workItem from="1663428212145" duration="3403000" />
     </task>
     <servers />
   </component>
