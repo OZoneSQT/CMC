@@ -13,7 +13,7 @@ public class Generator implements IGenerator {
     }
 
     @Override
-    public void generateProgram() {
+    public void generate() {
 
     }
 

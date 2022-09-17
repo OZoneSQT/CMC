@@ -13,7 +13,7 @@ public class Checker implements IChecker {
     }
 
     @Override
-    public void checkProgram() {
+    public void check() {
 
     }
 

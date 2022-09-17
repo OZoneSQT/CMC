@@ -14,6 +14,12 @@ import dk.seahawk.utils.SourceHandler;
 
 import javax.swing.*;
 
+/**
+ * Compiler for the programming language "Last" developed at
+ * VIA University Collage, Horsens Denmark as a part of a course in "Compiler Construction"
+ *
+ * By Michel Sommer and Patrick Christiansen
+ */
 public class Main {
     // private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
     private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
@@ -25,9 +31,11 @@ public class Main {
         if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             SourceHandler sourceHandler = new SourceHandler(jFileChooser.getSelectedFile().getAbsolutePath());
 
+            // Tokens
             IScanner scanner = new Scanner();
             scanner.init(sourceHandler);
 
+            // Grammar
             IParser parser = new Parser();
             parser.init(scanner);
 

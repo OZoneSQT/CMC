@@ -5,6 +5,40 @@ import dk.seahawk.scanner.IScanner;
 
 import static dk.seahawk.models.EToken.*;
 
+/**        Grammar
+ *
+ *         Program		        ::= Block
+ *         Block 		        ::= declare DeclarationList { Statements }
+ *         DeclarationList	    ::= OneDeclaration
+ *                                 | DeclarationList OneDeclaration
+ *         OneDeclaration	    ::= Type Identifier
+ *                                 | function Identifier(IdentifierList)
+ *         Type 		        ::= bool
+ *                                 | int
+ *                                 | char
+ *                                 | ObjectList
+ *         ObjectList		    ::= Object
+ *                                 | ObjectList Object
+ *         Object		        ::= array
+ *                                 | Block
+ *                                 | Object
+ *         IdentifierList	    ::= Identifier
+ *                                 | IdentifierList Identifier
+ *         Expression		    ::= Primary
+ *                                 | Expression Operator Primary
+ *         Primary		        ::= Identifier
+ *                                 | Identifier ( ExpressionList )
+ *                                 | Operator Primary
+ *                                 | IntegerLiteral
+ *         Statements		    ::= OneStatement
+ *                                 | Statements OneStatement
+ *         OneStatement	        ::= Expression
+ *                                 | if (Expression) { Statements }
+ *                                 | if (Expression) { Statements } else { Statements }
+ *                                 | print ( Expression )
+ *         ExpressionList		::= Expression ExpressionListTail
+ *         ExpressionListTail	::= Expression ExpressionListTail
+ */
 public class Parser implements IParser {
     private IScanner scan;
     private Token currentTerminal;
@@ -17,14 +51,109 @@ public class Parser implements IParser {
         currentTerminal = scan.scan();
     }
 
-
-    //TODO implement methods for Grammar
-
-    public void parseProgram() {
+    public void parse() {
         parseBlock();
         if (currentTerminal.token != EOT) System.out.println("Tokens found after end of program");
     }
 
+    //TODO implement methods for Grammar
+
+    // Program ::= Block
+    private void parseProgram() {
+
+    }
+
+    // Block ::= declare DeclarationList { Statements }
+    private void parseBlock() {
+
+    }
+
+    // DeclarationList ::= OneDeclaration | DeclarationList OneDeclaration
+    private void parseDeclarationList() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // OneDeclaration ::= Type Identifier | function Identifier(IdentifierList)
+    private void parseOneDeclaration() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // Type ::= bool | int | char | ObjectList
+    private void parseType() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // ObjectList ::= Object | ObjectList Object
+    private void parseObjectList() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // Object ::= array | Block | Object
+    private void parseObject() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // IdentifierList ::= Identifier | IdentifierList Identifier
+    private void parseIdentifierList() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // Expression ::= Primary | Expression Operator Primary
+    private void parseExpression() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // Expression ::= Primary | Expression Operator Primary
+    private void parsePrimary() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // Primary ::= Identifier | Identifier ( ExpressionList ) | Operator Primary | IntegerLiteral
+    private void parseStatements() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // OneStatement ::= Expression | if (Expression) { Statements } | if (Expression) { Statements } else { Statements } | print ( Expression )
+    private void parseOneStatement() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // ExpressionList ::= Expression ExpressionListTail
+    private void parseExpressionList() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+    // ExpressionListTail ::= Expression ExpressionListTail
+    private void parseExpressionListTail() {
+        switch (currentTerminal.token) {
+
+        }
+    }
+
+
+/*
     private void parseBlock() {
         accept(DECLARE);
         parseDeclarations();
@@ -34,13 +163,13 @@ public class Parser implements IParser {
     }
 
     private void parseDeclarations() {
-        while (currentTerminal.token == VAR ||
-                currentTerminal.token == FUNCTION)
-            parseOneDeclaration();
+        while ( currentTerminal.token == VAR ||
+                currentTerminal.token == FUNCTION) parseOneDeclaration();
     }
 
     private void parseOneDeclaration() {
         switch (currentTerminal.token) {
+
             case VAR:
                 accept(VAR);
                 accept(IDENTIFIER);
@@ -52,8 +181,7 @@ public class Parser implements IParser {
                 accept(IDENTIFIER);
                 accept(LEFTPARAN);
 
-                if (currentTerminal.token == IDENTIFIER)
-                    parseIdList();
+                if (currentTerminal.token == IDENTIFIER) parseIdList();
 
                 accept(RIGHTPARAN);
                 parseBlock();
@@ -82,9 +210,9 @@ public class Parser implements IParser {
                 currentTerminal.token == OPERATOR ||
                 currentTerminal.token == INTEGERLITERAL ||
                 currentTerminal.token == LEFTPARAN ||
-                currentTerminal.token == IF ||
+                currentTerminal.token == IF||
                 currentTerminal.token == WHILE ||
-                currentTerminal.token == SAY)
+                currentTerminal.token == SAY )
             parseOneStatement();
     }
 
@@ -189,11 +317,10 @@ public class Parser implements IParser {
             parseExpression();
         }
     }
+*/
 
     private void accept(EToken expected) {
-        if (currentTerminal.token == expected)
-            currentTerminal = scan.scan();
-        else
-            System.out.println("Expected token of kind " + expected);
+        if (currentTerminal.token == expected) { currentTerminal = scan.scan(); }
+        else { System.out.println("Expected token of kind " + expected); }
     }
 }

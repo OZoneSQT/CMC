@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/IGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/IGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/IParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/IParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +101,7 @@
       <workItem from="1663410117078" duration="14441000" />
       <workItem from="1663428212145" duration="3403000" />
       <workItem from="1663437426929" duration="2855000" />
+      <workItem from="1663440447184" duration="3104000" />
     </task>
     <servers />
   </component>
