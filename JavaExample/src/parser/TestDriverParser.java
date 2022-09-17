@@ -1,10 +1,18 @@
-package scanner;
+/*
+ * 30.08.2016 IParse gone, IScanner gone, minor editing
+ * 21.09.2012 Default directory changed
+ * 24.10.2009 IScanner and IParser
+ * 07.10.2009 New package structure
+ * 28.09.2006 Original version
+ */
+  
+package parser;
 
 
 import javax.swing.*;
 
- 
-public class TestDriverScanner
+
+public class TestDriverParser
 {
 	private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\JavaExample\\src\\example_files";
 	//private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\JavaExample\\src\\example_files";
@@ -12,18 +20,13 @@ public class TestDriverScanner
 	public static void main( String args[] )
 	{
 		JFileChooser fc = new JFileChooser( EXAMPLES_DIR );
-
-		/** JFileChooser = Dialog for selecting source file */
+		
 		if( fc.showOpenDialog( null ) == JFileChooser.APPROVE_OPTION ) {
 			SourceFile in = new SourceFile( fc.getSelectedFile().getAbsolutePath() );
 			Scanner s = new Scanner( in );
+			Parser p = new Parser( s );
 		
-			Token t = s.scan();
-			while( t.kind != TokenKind.EOT ) {
-				System.out.println( t.kind + " " + t.spelling );
-			
-				t = s.scan();
-			}
+			p.parseProgram();
 		}
 	}
 }
