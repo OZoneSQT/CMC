@@ -15,7 +15,7 @@ public class Scanner implements IScanner {
     }
 
     @Override
-    public void scanSource(SourceHandler source) {
+    public void init(SourceHandler source) {
         this.source = source;
         currentChar = source.getSource();
     }

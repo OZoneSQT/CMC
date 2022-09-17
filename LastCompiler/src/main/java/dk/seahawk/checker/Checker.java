@@ -1,4 +1,20 @@
 package dk.seahawk.checker;
 
-public class Checker {
+import dk.seahawk.parser.IParser;
+
+public class Checker implements IChecker {
+
+    public Checker() {
+    }
+
+    @Override
+    public void init(IParser parser) {
+
+    }
+
+    @Override
+    public void checkProgram() {
+
+    }
+
 }
