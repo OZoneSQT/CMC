@@ -502,3 +502,4 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+JavaExample/.idea/workspace.xml
