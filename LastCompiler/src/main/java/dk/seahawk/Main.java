@@ -46,9 +46,9 @@ public class Main {
             generator.init(checker);
 
             Token token = scanner.scan();
-            //parser.parseProgram();
-            //checker.checkProgram();
-            //generator.generateProgram();
+            //parser.parse();
+            //checker.check();
+            //generator.generate();
 
             // Log to console
             while (token.token != EToken.EOT) {
