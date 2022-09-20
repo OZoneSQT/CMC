@@ -2,6 +2,7 @@ package dk.seahawk.scanner;
 
 import dk.seahawk.models.EToken;
 import dk.seahawk.models.Token;
+import dk.seahawk.utils.IErrorHandler;
 import dk.seahawk.utils.SourceHandler;
 
 import static dk.seahawk.models.EToken.*;
@@ -40,16 +41,14 @@ import static dk.seahawk.models.EToken.*;
  */
 public class Scanner implements IScanner {
     private SourceHandler source;
+    private IErrorHandler errorHandler;
+
     private char currentChar;
     private StringBuffer currentSpelling = new StringBuffer();
 
-    public Scanner() {
-    }
-
-    @Override
-    public void init(SourceHandler source) {
+    public Scanner(SourceHandler source, IErrorHandler errorHandler) {
         this.source = source;
-        currentChar = source.getSource();
+        this.errorHandler = errorHandler;
     }
 
     private void takeIt() {
@@ -57,12 +56,12 @@ public class Scanner implements IScanner {
         currentChar = source.getSource();
     }
 
-    /* Sort bu ASCII value */
+    /* "Sort" by ASCII value */
     private boolean isLetter(char c) {
         return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
     }
 
-    /* Sort bu ASCII value */
+    /* "Sort" by ASCII value */
     private boolean isDigit(char c) {
         return c >= '0' && c <= '9';
     }
@@ -101,15 +100,6 @@ public class Scanner implements IScanner {
             case '=':
                 takeIt();
                 return OPERATOR;
-        /*
-            case ':':
-                takeIt();
-                if (currentChar == '=') {
-                    takeIt();
-                    return OPERATOR;
-                } else
-                    return ERROR;
-        */
 
             case ',':
                 takeIt();
@@ -152,9 +142,6 @@ public class Scanner implements IScanner {
                 return ENDBLOCK;
 
             case '\"':
-                takeIt();
-                return SEPERATOR;
-
             case '\'':
                 takeIt();
                 return SEPERATOR;

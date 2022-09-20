@@ -1,15 +1,16 @@
 package dk.seahawk.checker;
 
 import dk.seahawk.parser.IParser;
+import dk.seahawk.utils.IErrorHandler;
 
 public class Checker implements IChecker {
 
-    public Checker() {
-    }
+    private IParser parser;
+    private IErrorHandler errorHandler;
 
-    @Override
-    public void init(IParser parser) {
-
+    public Checker(IParser parser, IErrorHandler errorHandler) {
+        this.parser = parser;
+        this.errorHandler = errorHandler;
     }
 
     @Override

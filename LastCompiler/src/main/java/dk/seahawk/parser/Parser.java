@@ -2,6 +2,7 @@ package dk.seahawk.parser;
 
 import dk.seahawk.models.*;
 import dk.seahawk.scanner.IScanner;
+import dk.seahawk.utils.IErrorHandler;
 
 import static dk.seahawk.models.EToken.*;
 
@@ -44,17 +45,16 @@ import static dk.seahawk.models.EToken.*;
 // Recursive Descent Parser
 public class Parser implements IParser {
     private IScanner scan;
+    private IErrorHandler errorHandler;
     private Token currentTerminal;
 
-    public Parser() {
-    }
-
-    public void init(IScanner scan) {
+    public Parser(IScanner scan, IErrorHandler errorHandler) {
         this.scan = scan;
-        currentTerminal = scan.scan();
+        this.errorHandler = errorHandler;
     }
 
     public void parse() {
+        currentTerminal = scan.scan();
         parseProgram();
     }
 
@@ -106,6 +106,9 @@ public class Parser implements IParser {
             case ARRAY:
                 accept(ARRAY);
                 accept(IDENTIFIER);
+                accept(LEFTSQPARAN);
+                accept(INTEGERLITERAL);     // length
+                accept(RIGHTSQPARAN);
                 accept(SEMICOLON);
                 break;
 
@@ -134,7 +137,7 @@ public class Parser implements IParser {
     // DeclarationList ::= OneDeclaration | DeclarationList OneDeclaration
     private void parseDeclarationList() {
         switch (currentTerminal.token) {
-            case
+
         }
     }
 
@@ -230,7 +233,7 @@ public class Parser implements IParser {
 
     // Look at Token list
     // OneStatement ::= Expression | if (Expression) { Statements } | if (Expression) { Statements } else { Statements } | print ( Expression )
-    private void parseOneStatement() {
+    private void parseOneStatement() {/*
         switch (currentTerminal.token) {
             case IDENTIFIER:
             case INTEGERLITERAL:
@@ -274,7 +277,7 @@ public class Parser implements IParser {
             default:
                 System.out.println("Error in statement");
                 break;
-        }
+        }*/
     }
 
     // ExpressionList ::= Expression ExpressionListTail
@@ -290,173 +293,6 @@ public class Parser implements IParser {
 
         }
     }
-
-
-/*
-    private void parseBlock() {
-        accept(DECLARE);
-        parseDeclarations();
-        accept(DO);
-        parseStatements();
-        accept(OD);
-    }
-
-    private void parseDeclarations() {
-        while ( currentTerminal.token == VAR ||
-                currentTerminal.token == FUNCTION) parseOneDeclaration();
-    }
-
-    private void parseOneDeclaration() {
-        switch (currentTerminal.token) {
-
-            case VAR:
-                accept(VAR);
-                accept(IDENTIFIER);
-                accept(SEMICOLON);
-                break;
-
-            case FUNCTION:
-                accept(FUNCTION);
-                accept(IDENTIFIER);
-                accept(LEFTPARAN);
-
-                if (currentTerminal.token == IDENTIFIER) parseIdList();
-
-                accept(RIGHTPARAN);
-                parseBlock();
-                accept(RETURN);
-                parseExpression();
-                accept(SEMICOLON);
-                break;
-
-            default:
-                System.out.println("var or func expected");
-                break;
-        }
-    }
-
-    private void parseIdList() {
-        accept(IDENTIFIER);
-
-        while (currentTerminal.token == COMMA) {
-            accept(COMMA);
-            accept(IDENTIFIER);
-        }
-    }
-
-    private void parseStatements() {
-        while (currentTerminal.token == IDENTIFIER ||
-                currentTerminal.token == OPERATOR ||
-                currentTerminal.token == INTEGERLITERAL ||
-                currentTerminal.token == LEFTPARAN ||
-                currentTerminal.token == IF||
-                currentTerminal.token == WHILE ||
-                currentTerminal.token == SAY )
-            parseOneStatement();
-    }
-
-    private void parseOneStatement() {
-        switch (currentTerminal.token) {
-            case IDENTIFIER:
-            case INTEGERLITERAL:
-            case OPERATOR:
-            case LEFTPARAN:
-                parseExpression();
-                accept(SEMICOLON);
-                break;
-
-            case IF:
-                accept(IF);
-                parseExpression();
-                accept(THEN);
-                parseStatements();
-
-                if (currentTerminal.token == ELSE) {
-                    accept(ELSE);
-                    parseStatements();
-                }
-
-                accept(FI);
-                accept(SEMICOLON);
-                break;
-
-            case WHILE:
-                accept(WHILE);
-                parseExpression();
-                accept(DO);
-                parseStatements();
-                accept(OD);
-                accept(SEMICOLON);
-                break;
-
-            case PRINT:
-                accept(PRINT);
-                parseExpression();
-                accept(SEMICOLON);
-                break;
-
-            default:
-                System.out.println("Error in statement");
-                break;
-        }
-    }
-
-    private void parseExpression() {
-        parsePrimary();
-        while (currentTerminal.token == OPERATOR) {
-            accept(OPERATOR);
-            parsePrimary();
-        }
-    }
-
-    private void parsePrimary() {
-        switch (currentTerminal.token) {
-            case IDENTIFIER:
-                accept(IDENTIFIER);
-
-                if (currentTerminal.token == LEFTPARAN) {
-                    accept(LEFTPARAN);
-
-                    if (currentTerminal.token == IDENTIFIER ||
-                            currentTerminal.token == INTEGERLITERAL ||
-                            currentTerminal.token == OPERATOR ||
-                            currentTerminal.token == LEFTPARAN)
-                        parseExpressionList();
-
-
-                    accept(RIGHTPARAN);
-                }
-                break;
-
-            case INTEGERLITERAL:
-                accept(INTEGERLITERAL);
-                break;
-
-            case OPERATOR:
-                accept(OPERATOR);
-                parsePrimary();
-                break;
-
-            case LEFTPARAN:
-                accept(LEFTPARAN);
-                parseExpression();
-                accept(RIGHTPARAN);
-                break;
-
-            default:
-                System.out.println("Error in primary");
-                break;
-        }
-    }
-
-    private void parseExpressionList() {
-        parseExpression();
-        while (currentTerminal.token == COMMA) {
-            accept(COMMA);
-            parseExpression();
-        }
-    }
-*/
 
     private void accept(EToken expected) {
         if (currentTerminal.token == expected) {
