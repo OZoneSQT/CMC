@@ -207,15 +207,50 @@ public class Parser implements IParser {
 
     // Expression ::= Primary | Expression Operator Primary
     private void parseExpression() {
-        switch (currentTerminal.token) {
-
+        parsePrimary();
+        while (currentTerminal.token == OPERATOR) {
+            accept(OPERATOR);
+            parsePrimary();
         }
     }
 
     // Expression ::= Primary | Expression Operator Primary
     private void parsePrimary() {
         switch (currentTerminal.token) {
+            case IDENTIFIER:
+                accept(IDENTIFIER);
 
+                if (currentTerminal.token == LEFTPARAN) {
+                    accept(LEFTPARAN);
+
+                    if (currentTerminal.token == IDENTIFIER ||
+                            currentTerminal.token == INTEGERLITERAL ||
+                            currentTerminal.token == OPERATOR ||
+                            currentTerminal.token == LEFTPARAN)
+                        parseExpressionList();
+
+                    accept(RIGHTPARAN);
+                }
+                break;
+
+            case INTEGERLITERAL:
+                accept(INTEGERLITERAL);
+                break;
+
+            case OPERATOR:
+                accept(OPERATOR);
+                parsePrimary();
+                break;
+
+            case LEFTPARAN:
+                accept(LEFTPARAN);
+                parseExpression();
+                accept(RIGHTPARAN);
+                break;
+
+            default:
+                System.out.println("Error in primary");
+                break;
         }
     }
 
@@ -233,7 +268,7 @@ public class Parser implements IParser {
 
     // Look at Token list
     // OneStatement ::= Expression | if (Expression) { Statements } | if (Expression) { Statements } else { Statements } | print ( Expression )
-    private void parseOneStatement() {/*
+    private void parseOneStatement() {
         switch (currentTerminal.token) {
             case IDENTIFIER:
             case INTEGERLITERAL:
@@ -247,29 +282,21 @@ public class Parser implements IParser {
             case IF:
                 accept(IF);
                 parseExpression();
-                accept(THEN);
+                accept(BEGINBLOCK);
                 parseStatements();
+                accept(ENDBLOCK);
 
-                if (currentTerminal.kind == ELSE) {
+                if (currentTerminal.token == ELSE) {
                     accept(ELSE);
+                    accept(BEGINBLOCK);
                     parseStatements();
+                    accept(ENDBLOCK);
                 }
 
-                accept(FI);
-                accept(SEMICOLON);
                 break;
 
-            case WHILE:
-                accept(WHILE);
-                parseExpression();
-                accept(DO);
-                parseStatements();
-                accept(OD);
-                accept(SEMICOLON);
-                break;
-
-            case SAY:
-                accept(SAY);
+            case PRINT:
+                accept(PRINT);
                 parseExpression();
                 accept(SEMICOLON);
                 break;
@@ -277,13 +304,15 @@ public class Parser implements IParser {
             default:
                 System.out.println("Error in statement");
                 break;
-        }*/
+        }
     }
 
     // ExpressionList ::= Expression ExpressionListTail
     private void parseExpressionList() {
-        switch (currentTerminal.token) {
-
+        parseExpression();
+        while (currentTerminal.token == COMMA) {
+            accept(COMMA);
+            parseExpression();
         }
     }
 

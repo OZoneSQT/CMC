@@ -49,6 +49,7 @@ public class Scanner implements IScanner {
     public Scanner(SourceHandler source, IErrorHandler errorHandler) {
         this.source = source;
         this.errorHandler = errorHandler;
+        currentChar = source.getSource();
     }
 
     private void takeIt() {
