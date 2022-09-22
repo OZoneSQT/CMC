@@ -8,7 +8,7 @@ import static dk.seahawk.models.EToken.*;
 
 /**
  * Grammar
- * <p>
+ *
  * Program		        ::= Block
  * Block 		        ::= declare DeclarationList { Statements }
  * DeclarationList	    ::= OneDeclaration
@@ -117,7 +117,6 @@ public class Parser implements IParser {
                 accept(IDENTIFIER);
                 accept(LEFTPARAN);
 
-                //TODO Validate condition
                 if (currentTerminal.token == IDENTIFIER)
                     parseIdList();
 
@@ -261,6 +260,7 @@ public class Parser implements IParser {
                 currentTerminal.token == INTEGERLITERAL ||
                 currentTerminal.token == LEFTPARAN ||
                 currentTerminal.token == IF ||
+                currentTerminal.token == ELSE ||
                 currentTerminal.token == PRINT) {
             parseOneStatement();
         }
@@ -311,7 +311,7 @@ public class Parser implements IParser {
     private void parseExpressionList() {
         parseExpression();
         while (currentTerminal.token == COMMA) {
-            accept(COMMA);
+            accept(COMMA);      // Separator
             parseExpression();
         }
     }
@@ -323,6 +323,7 @@ public class Parser implements IParser {
         }
     }
 
+    // Expected terminal (EToken)
     private void accept(EToken expected) {
         if (currentTerminal.token == expected) {
             currentTerminal = scan.scan();

@@ -1,0 +1,8 @@
+# missing an operator "=" in declaring variable a, fails in parser
+
+int a 2
+int b = 5
+
+main () {
+    print(a.add(b)
+}
