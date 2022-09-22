@@ -10,8 +10,8 @@ import static dk.seahawk.models.EToken.*;
  * Grammar
  *
  * Program		        ::= Block
- * Block 		        ::= declare DeclarationList { Statements }
- * DeclarationList	    ::= OneDeclaration
+ * Block 		        ::= DeclarationList { Statements }
+ * DeclarationList	    ::= OneDeclaration*
  *                          | DeclarationList OneDeclaration
  * OneDeclaration	    ::= Type Identifier
  *                          | function Identifier(IdentifierList)
@@ -19,27 +19,22 @@ import static dk.seahawk.models.EToken.*;
  *                          | int
  *                          | char
  *                          | ObjectList
- * ObjectList		    ::= Object
- *                          | ObjectList Object
- * Object		        ::= array
+ * ObjectList		    ::= Object*
+ * Object		        ::= array Identifier [ IntegerLiteral ]
  *                          | Block
  *                          | Object
- * IdentifierList	    ::= Identifier
- *                          | IdentifierList Identifier
+ * IdentifierList	    ::= Identifier*
  * Expression		    ::= Primary
  *                          | Expression Operator Primary
- * Primary		        ::= Identifier
- *                          | Identifier ( ExpressionList )
+ * Primary		        ::= Identifier ( ε | ExpressionList )
  *                          | Operator Primary
  *                          | IntegerLiteral
- * Statements		    ::= OneStatement
- *                          | Statements OneStatement
- * OneStatement	        ::= Expression
- *                          | if (Expression) { Statements }
- *                          | if (Expression) { Statements } else { Statements }
+ *                          | ( Expression )
+ * Statements		    ::= OneStatement*
+ * OneStatement	        ::= Expression;
+ *                          | if (Expression) { Statements } ( ε | else { Statements } )
  *                          | print ( Expression )
- * ExpressionList		::= Expression ExpressionListTail
- * ExpressionListTail	::= Expression ExpressionListTail
+ * ExpressionList		::= Expression(, Expression)*
  */
 
 // Recursive Descent Parser
@@ -58,32 +53,65 @@ public class Parser implements IParser {
         parseProgram();
     }
 
-    //TODO implement methods for Grammar
-
     // Program ::= Block
     private void parseProgram() {
         parseBlock();
         if (currentTerminal.token != EOT) System.out.println("Tokens found after end of program");
     }
 
-    // Block ::= declare DeclarationList { Statements }
+    // Block ::= DeclarationList { Statements }
     private void parseBlock() {
         accept(BEGINBLOCK);
+        parseDeclarationList();
         parseStatements();
         accept(ENDBLOCK);
     }
 
-    private void parseDeclarations() {
-        while (currentTerminal.token == BOOL ||
+    // DeclarationList ::= OneDeclaration*
+    private void parseDeclarationList() {
+        if (currentTerminal.token == BOOL ||
                 currentTerminal.token == CHAR ||
                 currentTerminal.token == INT ||
                 currentTerminal.token == ARRAY ||
-                currentTerminal.token == FUNCTION)
+                currentTerminal.token == FUNCTION ) {
             parseOneDeclaration();
+        }
     }
 
-    // OneDeclaration ::= Type Identifier | function Identifier(IdentifierList)
+    // OneDeclaration ::= Type Identifier | function ( IdentifierList )
     private void parseOneDeclaration() {
+        switch (currentTerminal.token) {
+            case BOOL:
+            case CHAR:
+            case INT:
+            case ARRAY:
+                parseType();
+                break;
+
+            case FUNCTION:
+                accept(FUNCTION);
+                accept(IDENTIFIER);
+                accept(LEFTPARAN);
+
+                if (currentTerminal.token == IDENTIFIER) parseIdentifierList();
+
+                accept(RIGHTPARAN);
+                parseBlock();
+
+                if (currentTerminal.token == RETURN) accept(RETURN);
+
+                parseExpression();
+                accept(SEMICOLON);
+                break;
+
+            default:
+                System.out.println("*** Variable or function expected ***");
+                break;
+        }
+    }
+
+    // Type ::= bool | int | char | ObjectList
+    private void parseType() {
         switch (currentTerminal.token) {
             case BOOL:
                 accept(BOOL);
@@ -112,35 +140,13 @@ public class Parser implements IParser {
                 accept(SEMICOLON);
                 break;
 
-            case FUNCTION:
-                accept(FUNCTION);
-                accept(IDENTIFIER);
-                accept(LEFTPARAN);
-
-                if (currentTerminal.token == IDENTIFIER)
-                    parseIdList();
-
-                accept(RIGHTPARAN);
-                parseBlock();
-                accept(RETURN);
-                parseExpression();
-                accept(SEMICOLON);
-                break;
-
             default:
-                System.out.println("*** Variable or function expected ***");
+                System.out.println("*** Variable expected ***");
                 break;
         }
     }
 
-    // DeclarationList ::= OneDeclaration | DeclarationList OneDeclaration
-    private void parseDeclarationList() {
-        switch (currentTerminal.token) {
-
-        }
-    }
-
-    private void parseIdList() {
+    private void parseIdentifierList() {
         accept(IDENTIFIER);
 
         while (currentTerminal.token == COMMA) {
@@ -149,71 +155,26 @@ public class Parser implements IParser {
         }
     }
 
-    // TODO moved to OneDeclaration
-    // Type ::= bool | int | char | ObjectList
-    private void parseType() {
-        switch (currentTerminal.token) {
-            case BOOL:
-                accept(BOOL);
-                accept(IDENTIFIER);
-                accept(SEMICOLON);
-                break;
 
-            case CHAR:
-                accept(CHAR);
-                accept(IDENTIFIER);
-                accept(SEMICOLON);
-                break;
-
-            case INT:
-                accept(INT);
-                accept(IDENTIFIER);
-                accept(SEMICOLON);
-                break;
-
-            case ARRAY:
-                accept(ARRAY);
-                accept(IDENTIFIER);
-                accept(SEMICOLON);
-                break;
-
-            default:
-                System.out.println("*** Variable expected ***");
-                break;
-        }
-    }
-
-    // ObjectList ::= Object | ObjectList Object
-    private void parseObjectList() {
-        switch (currentTerminal.token) {
-
-        }
-    }
-
-    // Object ::= array | Block | Object
-    private void parseObject() {
-        switch (currentTerminal.token) {
-
-        }
-    }
-
-    // IdentifierList ::= Identifier | IdentifierList Identifier
-    private void parseIdentifierList() {
-        switch (currentTerminal.token) {
-
-        }
-    }
-
-    // Expression ::= Primary | Expression Operator Primary
+    // Expression ::= Primary (Operator Primary)*
     private void parseExpression() {
         parsePrimary();
-        while (currentTerminal.token == OPERATOR) {
+        while (currentTerminal.token == IDENTIFIER) {
             accept(OPERATOR);
             parsePrimary();
         }
     }
 
-    // Expression ::= Primary | Expression Operator Primary
+    // ExpressionList ::= Expression(, Expression)*
+    private void parseExpressionList() {
+        parseExpression();
+        while (currentTerminal.token == COMMA) {
+            accept(COMMA);      // Separator
+            parseExpression();
+        }
+    }
+
+    // Expression ::= Identifier ( ε | ExpressionList ) | Operator Primary | IntegerLiteral | ( Expression )
     private void parsePrimary() {
         switch (currentTerminal.token) {
             case IDENTIFIER:
@@ -253,21 +214,20 @@ public class Parser implements IParser {
         }
     }
 
-    // Primary ::= Identifier | Identifier ( ExpressionList ) | Operator Primary | IntegerLiteral
+    // Primary ::= OneStatement*
     private void parseStatements() {
         while (currentTerminal.token == IDENTIFIER ||
                 currentTerminal.token == OPERATOR ||
                 currentTerminal.token == INTEGERLITERAL ||
                 currentTerminal.token == LEFTPARAN ||
                 currentTerminal.token == IF ||
-                currentTerminal.token == ELSE ||
                 currentTerminal.token == PRINT) {
             parseOneStatement();
         }
     }
 
     // Look at Token list
-    // OneStatement ::= Expression | if (Expression) { Statements } | if (Expression) { Statements } else { Statements } | print ( Expression )
+    // OneStatement ::= Expression ; | if (Expression) { Statements }  ( ε | else { Statements }  ) | print ( Expression )
     private void parseOneStatement() {
         switch (currentTerminal.token) {
             case IDENTIFIER:
@@ -307,22 +267,6 @@ public class Parser implements IParser {
         }
     }
 
-    // ExpressionList ::= Expression ExpressionListTail
-    private void parseExpressionList() {
-        parseExpression();
-        while (currentTerminal.token == COMMA) {
-            accept(COMMA);      // Separator
-            parseExpression();
-        }
-    }
-
-    // ExpressionListTail ::= Expression ExpressionListTail
-    private void parseExpressionListTail() {
-        switch (currentTerminal.token) {
-
-        }
-    }
-
     // Expected terminal (EToken)
     private void accept(EToken expected) {
         if (currentTerminal.token == expected) {
@@ -331,4 +275,5 @@ public class Parser implements IParser {
             System.out.println("Expected token of kind " + expected);
         }
     }
+
 }

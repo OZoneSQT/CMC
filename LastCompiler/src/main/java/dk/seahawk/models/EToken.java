@@ -11,14 +11,14 @@ public enum EToken {
     FUNCTION("function"),
     IF("if"),
     ELSE("else"),
-    RETURN("return"),       //TODO How to
+    RETURN("return"),
     PRINT("print"),
 
     // datatypes ...
     BOOL("bool"),
     CHAR("char"),
     INT("int"),
-    ARRAY("arr"),           //TODO How to
+    ARRAY("arr"),
 
     // punctuation...
     COMMA(","),

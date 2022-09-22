@@ -23,8 +23,8 @@ import javax.swing.*;
  * By Michel Sommer and Patrick Christiansen
  */
 public class Main {
-    private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
-    //private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
+    //private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
+    private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
 
     public static void main(String args[]) throws InterruptedException {
         JFileChooser jFileChooser = new JFileChooser(EXAMPLES_DIR);
@@ -69,10 +69,19 @@ public class Main {
                 - Target Code Generator
              */
 
+            System.out.println("*** SCAN => ");
             Token token = scanner.scan();
-            //parser.parse();
+
+            System.out.println("*** PARSE => ");
+            parser.parse();
+
+            //System.out.println("*** CHECK => ");
             //checker.check();
+
+            //System.out.println("*** GENERATE => ");
             //generator.generate();
+
+            System.out.println("*** END *** ");
 
             // Log to console
             while (token.token != EToken.EOT) {
