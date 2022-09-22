@@ -7,7 +7,6 @@
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +107,7 @@
       <workItem from="1663650876078" duration="15898000" />
       <workItem from="1663777197606" duration="1458000" />
       <workItem from="1663836000201" duration="1900000" />
-      <workItem from="1663856298919" duration="8245000" />
+      <workItem from="1663856298919" duration="11391000" />
     </task>
     <servers />
   </component>

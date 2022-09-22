@@ -61,10 +61,10 @@ public class Parser implements IParser {
 
     // Block ::= DeclarationList { Statements }
     private void parseBlock() {
-        accept(BEGINBLOCK);
+        accept(BEGINBLOCK); //TODO
         parseDeclarationList();
         parseStatements();
-        accept(ENDBLOCK);
+        accept(ENDBLOCK);   //TODO
     }
 
     // DeclarationList ::= OneDeclaration*
@@ -160,7 +160,7 @@ public class Parser implements IParser {
     private void parseExpression() {
         parsePrimary();
         while (currentTerminal.token == IDENTIFIER) {
-            accept(OPERATOR);
+            accept(OPERATOR);   //TODO
             parsePrimary();
         }
     }
@@ -235,7 +235,7 @@ public class Parser implements IParser {
             case OPERATOR:
             case LEFTPARAN:
                 parseExpression();
-                accept(SEMICOLON);
+                accept(SEMICOLON);  //TODO
                 break;
 
             // Can be condition = true

@@ -69,25 +69,22 @@ public class Main {
                 - Target Code Generator
              */
 
-            System.out.println("*** SCAN => ");
             Token token = scanner.scan();
 
-            System.out.println("*** PARSE => ");
             parser.parse();
 
-            //System.out.println("*** CHECK => ");
             //checker.check();
 
-            //System.out.println("*** GENERATE => ");
             //generator.generate();
-
-            System.out.println("*** END *** ");
 
             // Log to console
             while (token.token != EToken.EOT) {
                 System.out.println(token.token + " " + token.spelling);
                 token = scanner.scan();
             }
+
+            System.out.println("*** END *** ");
+
         }
     }
 
