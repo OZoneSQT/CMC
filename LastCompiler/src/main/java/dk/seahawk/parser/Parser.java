@@ -56,15 +56,19 @@ public class Parser implements IParser {
     // Program ::= Block
     private void parseProgram() {
         parseBlock();
-        if (currentTerminal.token != EOT) System.out.println("Tokens found after end of program");
+       // if (currentTerminal.token != EOT) System.out.println("Tokens found after end of program");
     }
 
     // Block ::= DeclarationList { Statements }
     private void parseBlock() {
-        accept(BEGINBLOCK); //TODO
+
+        if (currentTerminal.token == BEGINBLOCK) accept(BEGINBLOCK);
+
         parseDeclarationList();
         parseStatements();
-        accept(ENDBLOCK);   //TODO
+
+        if (currentTerminal.token == ENDBLOCK) accept(ENDBLOCK);
+
     }
 
     // DeclarationList ::= OneDeclaration*
@@ -160,7 +164,7 @@ public class Parser implements IParser {
     private void parseExpression() {
         parsePrimary();
         while (currentTerminal.token == IDENTIFIER) {
-            accept(OPERATOR);   //TODO
+            if (currentTerminal.token == OPERATOR) accept(OPERATOR);   //TODO
             parsePrimary();
         }
     }
@@ -235,7 +239,7 @@ public class Parser implements IParser {
             case OPERATOR:
             case LEFTPARAN:
                 parseExpression();
-                accept(SEMICOLON);  //TODO
+                //accept(SEMICOLON);  //TODO
                 break;
 
             // Can be condition = true
