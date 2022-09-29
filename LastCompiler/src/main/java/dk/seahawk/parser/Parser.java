@@ -164,7 +164,8 @@ public class Parser implements IParser {
     private void parseExpression() {
         parsePrimary();
         while (currentTerminal.token == IDENTIFIER) {
-            if (currentTerminal.token == OPERATOR) accept(OPERATOR);   //TODO
+            if (currentTerminal.token == OPERATOR) accept(OPERATOR);
+            accept(OPERATOR);   //TODO
             parsePrimary();
         }
     }
