@@ -1,5 +1,5 @@
+{
 char c = a;
-
 array[int] string = [ ];
 
 main () {
@@ -11,4 +11,5 @@ main () {
     }
 
     print(string);
+}
 }

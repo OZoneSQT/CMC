@@ -7,6 +7,15 @@
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +118,8 @@
       <workItem from="1663856298919" duration="11391000" />
       <workItem from="1663926953353" duration="2758000" />
       <workItem from="1663929793342" duration="327000" />
+      <workItem from="1664476983542" duration="6584000" />
+      <workItem from="1665052986959" duration="623000" />
     </task>
     <servers />
   </component>

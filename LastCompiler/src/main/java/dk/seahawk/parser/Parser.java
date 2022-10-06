@@ -194,7 +194,7 @@ public class Parser implements IParser {
                             currentTerminal.token == LEFTPARAN)
                         parseExpressionList();
 
-                    accept(RIGHTPARAN);
+                    accept(RIGHTPARAN);     //TODO Why does this not catch closing parentheses if empty ex. Main()
                 }
                 break;
 
@@ -251,6 +251,7 @@ public class Parser implements IParser {
                 parseStatements();
                 accept(ENDBLOCK);
 
+                //TODO Why is ELSE parsing without IF
                 if (currentTerminal.token == ELSE) {
                     accept(ELSE);
                     accept(BEGINBLOCK);
