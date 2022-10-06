@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/char-char-test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/EToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/models/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/SourceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/SourceHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,14 +16,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -56,7 +52,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CloudStation/Downloads/CMC-Java/JavaExample&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/Extended-Triangle-Compiler&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -102,6 +98,20 @@
       <workItem from="1663409811942" duration="155000" />
       <workItem from="1663410117078" duration="14441000" />
       <workItem from="1663428212145" duration="3403000" />
+      <workItem from="1663437426929" duration="2855000" />
+      <workItem from="1663440447184" duration="3704000" />
+      <workItem from="1663492949611" duration="9193000" />
+      <workItem from="1663587815381" duration="1340000" />
+      <workItem from="1663590140061" duration="4177000" />
+      <workItem from="1663650876078" duration="15898000" />
+      <workItem from="1663777197606" duration="1458000" />
+      <workItem from="1663836000201" duration="1900000" />
+      <workItem from="1663856298919" duration="11391000" />
+      <workItem from="1663926953353" duration="2758000" />
+      <workItem from="1663929793342" duration="327000" />
+      <workItem from="1664476983542" duration="6584000" />
+      <workItem from="1665052986959" duration="623000" />
+      <workItem from="1665058128659" duration="1680000" />
     </task>
     <servers />
   </component>

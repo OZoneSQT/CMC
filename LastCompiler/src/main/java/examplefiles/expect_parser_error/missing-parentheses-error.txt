@@ -1,0 +1,8 @@
+# missing parentheses "()" in main, fails in parser
+
+int a = 2;
+int b = 5;
+
+main {
+    print(a.add(b);
+}

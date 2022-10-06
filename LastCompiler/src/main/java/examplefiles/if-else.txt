@@ -1,6 +1,6 @@
 {
 char c = a;
-array[int] string = [ ];
+array[int] string = [];
 
 main () {
     int i = 0;
@@ -8,8 +8,8 @@ main () {
     if(i < 5) {
         string.add(i, c);
         i.add(i, 1);
+    } else {
+        print(string);
     }
-
-    print(string);
 }
 }

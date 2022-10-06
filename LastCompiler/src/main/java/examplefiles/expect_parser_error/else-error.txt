@@ -1,0 +1,9 @@
+# starts with else, fails parser
+
+char c = abc;
+
+main () {
+    else {
+        print(c);
+    }
+}

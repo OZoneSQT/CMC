@@ -2,21 +2,53 @@ package dk.seahawk.scanner;
 
 import dk.seahawk.models.EToken;
 import dk.seahawk.models.Token;
+import dk.seahawk.utils.IErrorHandler;
 import dk.seahawk.utils.SourceHandler;
 
 import static dk.seahawk.models.EToken.*;
 
+/** Tokens
+ *
+ *  Identifier	    ::= Letter ( Letter | Digit )*
+ *  INTEGERLITERAL	::= Digit
+ *  Operator		::= + | - | * | / | = | % | ^
+ *  Letter			::= a | ... | z | A | ... | Z
+ *  Digit		    ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+ *
+ *  Main
+ *  function
+ *  if
+ *  else
+ *  return
+ *  print
+ *
+ *  char
+ *  int
+ *  bool
+ *  array
+ *
+ *  ,
+ *  ;
+ *  :
+ *  (
+ *  )
+ *  {
+ *  }
+ *  [
+ *  ]
+ *  “
+ *  '
+ */
 public class Scanner implements IScanner {
     private SourceHandler source;
+    private IErrorHandler errorHandler;
+
     private char currentChar;
     private StringBuffer currentSpelling = new StringBuffer();
 
-    public Scanner() {
-    }
-
-    @Override
-    public void scanSource(SourceHandler source) {
+    public Scanner(SourceHandler source, IErrorHandler errorHandler) {
         this.source = source;
+        this.errorHandler = errorHandler;
         currentChar = source.getSource();
     }
 
@@ -25,12 +57,12 @@ public class Scanner implements IScanner {
         currentChar = source.getSource();
     }
 
-    /* Sort bu ASCII value */
+    /* "Sort" by ASCII value */
     private boolean isLetter(char c) {
         return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
     }
 
-    /* Sort bu ASCII value */
+    /* "Sort" by ASCII value */
     private boolean isDigit(char c) {
         return c >= '0' && c <= '9';
     }
@@ -69,15 +101,6 @@ public class Scanner implements IScanner {
             case '=':
                 takeIt();
                 return OPERATOR;
-        /*
-            case ':':
-                takeIt();
-                if (currentChar == '=') {
-                    takeIt();
-                    return OPERATOR;
-                } else
-                    return ERROR;
-        */
 
             case ',':
                 takeIt();
@@ -120,9 +143,6 @@ public class Scanner implements IScanner {
                 return ENDBLOCK;
 
             case '\"':
-                takeIt();
-                return SEPERATOR;
-
             case '\'':
                 takeIt();
                 return SEPERATOR;

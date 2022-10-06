@@ -1,3 +1,4 @@
+{
 int a = 2;
 int b = 5;
 
@@ -7,4 +8,4 @@ main () {
 
 sub(a, b) {
      print(a.add(b);
-}
+}}

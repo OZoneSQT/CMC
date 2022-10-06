@@ -1,10 +1,12 @@
 package dk.seahawk.models;
 
 public enum EToken {
+    // literals, identifiers, operators...
     IDENTIFIER,
     INTEGERLITERAL,
     OPERATOR,
 
+    // reserved words ...
     MAIN("main"),
     FUNCTION("function"),
     IF("if"),
@@ -12,15 +14,19 @@ public enum EToken {
     RETURN("return"),
     PRINT("print"),
 
+    // datatypes ...
     BOOL("bool"),
     CHAR("char"),
     INT("int"),
     ARRAY("arr"),
 
+    // punctuation...
     COMMA(","),
     DOT("."),
     SEMICOLON(";"),
     COLON(":"),
+
+    // brackets...
     LEFTPARAN("("),
     RIGHTPARAN(")"),
     LEFTSQPARAN("["),
@@ -29,8 +35,8 @@ public enum EToken {
     ENDBLOCK("}"),
     SEPERATOR("\""),
 
+    // special tokens...
     EOT,
-
     ERROR;
 
 
