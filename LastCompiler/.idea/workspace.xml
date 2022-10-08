@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="" />
+    <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/AST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ASTViewer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ParserAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/Declaration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/DeclarationList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/FunctionDeclaration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/OneDeclaration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/VariableDeclaration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ArrayExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BinaryExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BoolExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/CharExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ExpressionList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/IntegerExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/UnaryExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/ElseStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/ExpressionStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/IfStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/PrintStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/Statement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/StatementList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Identifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/IntegerLiteral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Operator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +44,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,19 +68,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/Extended-Triangle-Compiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/GitHub/CMC/JavaExample"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -110,6 +139,7 @@
       <workItem from="1665052986959" duration="623000" />
       <workItem from="1665058128659" duration="1680000" />
       <workItem from="1665060004456" duration="9000" />
+      <workItem from="1665257049966" duration="3909000" />
     </task>
     <servers />
   </component>
