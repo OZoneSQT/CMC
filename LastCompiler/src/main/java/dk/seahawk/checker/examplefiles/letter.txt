@@ -1,7 +1,0 @@
-{
-    char a = "A";
-    char b = 'B';
-    main () {
-        print(a + b);
-    }
-}

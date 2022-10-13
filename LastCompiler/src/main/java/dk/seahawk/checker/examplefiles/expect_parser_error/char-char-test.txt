@@ -1,4 +1,0 @@
-# Does not fail on declaration
-{
-    char char = char + char;
-}
