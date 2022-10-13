@@ -1,4 +1,3 @@
 package dk.seahawk.ast.expression;
 
-public class ExpressionList extends Expression {
-}
+public class ExpressionList extends Expression { }

@@ -3,9 +3,17 @@ package dk.seahawk.ast.statement;
 import dk.seahawk.ast.expression.Expression;
 
 public class ExpressionStatement extends Statement {
-    public Expression exp;
+    private Expression exp;
 
-    public ExpressionStatement( Expression exp ) {
+    public Expression getExp() {
+        return exp;
+    }
+
+    public void setExp(Expression exp) {
+        this.exp = exp;
+    }
+
+    public ExpressionStatement(Expression exp ) {
         this.exp = exp;
     }
 }
