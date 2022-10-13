@@ -5,6 +5,10 @@ import dk.seahawk.ast.terminal.Identifier;
 public class CharExpression extends Expression {
     private Identifier name;
 
+    public CharExpression(Identifier name ) {
+        this.name = name;
+    }
+
     public Identifier getName() {
         return name;
     }
@@ -13,7 +17,4 @@ public class CharExpression extends Expression {
         this.name = name;
     }
 
-    public CharExpression(Identifier name ) {
-        this.name = name;
-    }
 }

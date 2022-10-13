@@ -8,24 +8,16 @@ public class Block extends AST {
     private DeclarationList decs;
     private StatementList stats;
 
+    public Block(DeclarationList decs, StatementList stats ) {
+        this.decs = decs;
+        this.stats = stats;
+    }
+
     public DeclarationList getDecs() {
         return decs;
     }
 
-    public void setDecs(DeclarationList decs) {
-        this.decs = decs;
-    }
-
     public StatementList getStats() {
         return stats;
-    }
-
-    public void setStats(StatementList stats) {
-        this.stats = stats;
-    }
-
-    public Block(DeclarationList decs, StatementList stats ) {
-        this.decs = decs;
-        this.stats = stats;
     }
 }

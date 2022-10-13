@@ -7,6 +7,12 @@ public class ElseStatement extends Statement {
     private StatementList thenPart;
     private StatementList elsePart;
 
+    public ElseStatement(Expression exp, StatementList thenPart, StatementList elsePart ) {
+        this.exp = exp;
+        this.thenPart = thenPart;
+        this.elsePart = elsePart;
+    }
+
     public Expression getExp() {
         return exp;
     }
@@ -31,9 +37,7 @@ public class ElseStatement extends Statement {
         this.elsePart = elsePart;
     }
 
-    public ElseStatement(Expression exp, StatementList thenPart, StatementList elsePart ) {
-        this.exp = exp;
-        this.thenPart = thenPart;
-        this.elsePart = elsePart;
-    }
+  //  public Object visit(Visitor v. Object arg) {
+
+   // }
 }

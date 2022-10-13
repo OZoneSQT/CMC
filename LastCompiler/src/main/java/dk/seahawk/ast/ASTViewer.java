@@ -45,7 +45,7 @@ public class ASTViewer extends JFrame {
             node.setUserObject("*** NULL ***");
         } else if( ast instanceof Block) {
             node.setUserObject( "Block" );
-            node.add( createTree( ((Block)ast).decs ) );
+            node.add( createTree( ((Block)ast). ) );
             node.add( createTree( ((Block)ast).stats ) );
         } else if( ast instanceof Declaration) {
             node.setUserObject( "Declarations" );

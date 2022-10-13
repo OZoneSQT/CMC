@@ -5,37 +5,6 @@ import dk.seahawk.ast.terminal.Block;
 import dk.seahawk.ast.terminal.Identifier;
 
 public class FunctionDeclaration {
-    public Identifier getName() {
-        return name;
-    }
-
-    public void setName(Identifier name) {
-        this.name = name;
-    }
-
-    public DeclarationList getParams() {
-        return params;
-    }
-
-    public void setParams(DeclarationList params) {
-        this.params = params;
-    }
-
-    public Block getBlock() {
-        return block;
-    }
-
-    public void setBlock(Block block) {
-        this.block = block;
-    }
-
-    public Expression getRetExp() {
-        return retExp;
-    }
-
-    public void setRetExp(Expression retExp) {
-        this.retExp = retExp;
-    }
 
     private Identifier name;
     private DeclarationList params;
@@ -46,6 +15,38 @@ public class FunctionDeclaration {
         this.name = name;
         this.params = params;
         this.block = block;
+        this.retExp = retExp;
+    }
+
+    public Identifier getName() {
+        return name;
+    }
+
+    public DeclarationList getParams() {
+        return params;
+    }
+
+    public Block getBlock() {
+        return block;
+    }
+
+    public Expression getRetExp() {
+        return retExp;
+    }
+
+    public void setName(Identifier name) {
+        this.name = name;
+    }
+
+    public void setParams(DeclarationList params) {
+        this.params = params;
+    }
+
+    public void setBlock(Block block) {
+        this.block = block;
+    }
+
+    public void setRetExp(Expression retExp) {
         this.retExp = retExp;
     }
 }

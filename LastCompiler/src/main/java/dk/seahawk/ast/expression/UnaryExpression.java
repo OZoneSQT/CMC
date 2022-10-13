@@ -5,6 +5,13 @@ import dk.seahawk.ast.terminal.Operator;
 public class UnaryExpression extends Expression {
     private Operator operator;
 
+    private Expression operand;
+
+    public UnaryExpression( Operator operator, Expression operand ) {
+        this.operator = operator;
+        this.operand = operand;
+    }
+
     public Operator getOperator() {
         return operator;
     }
@@ -21,10 +28,4 @@ public class UnaryExpression extends Expression {
         this.operand = operand;
     }
 
-    private Expression operand;
-
-    public UnaryExpression( Operator operator, Expression operand ) {
-        this.operator = operator;
-        this.operand = operand;
-    }
 }

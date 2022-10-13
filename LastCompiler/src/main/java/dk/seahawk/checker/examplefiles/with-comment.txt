@@ -1,0 +1,4 @@
+{main () {
+    # comment
+    print(5 * 7);
+}}

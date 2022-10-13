@@ -12,4 +12,16 @@ public class BinaryExpression extends Expression {
         this.operand1 = operand1;
         this.operand2 = operand2;
     }
+
+    public void setOperator(Operator operator) {
+        this.operator = operator;
+    }
+
+    public void setOperand1(Expression operand1) {
+        this.operand1 = operand1;
+    }
+
+    public void setOperand2(Expression operand2) {
+        this.operand2 = operand2;
+    }
 }

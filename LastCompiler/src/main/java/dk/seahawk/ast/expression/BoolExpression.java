@@ -5,6 +5,10 @@ import dk.seahawk.ast.terminal.Identifier;
 public class BoolExpression extends Expression {
     private Identifier name;
 
+    public BoolExpression(Identifier name ) {
+        this.name = name;
+    }
+
     public Identifier getName() {
         return name;
     }
@@ -13,7 +17,4 @@ public class BoolExpression extends Expression {
         this.name = name;
     }
 
-    public BoolExpression(Identifier name ) {
-        this.name = name;
-    }
 }

@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/IVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/return-add-two-integeres-should-it-fail.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ASTViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ASTViewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/FunctionDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/OneDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/OneDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/declaration/VariableDeclaration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ArrayExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ArrayExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BinaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BoolExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/BoolExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/CharExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/CharExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/ExpressionList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/IntegerExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/IntegerExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/expression/UnaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/ElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/ElseStatement.java" afterDir="false" />
@@ -20,10 +22,20 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/IfStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/statement/PrintStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Identifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/IntegerLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Operator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/terminal/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/add-two-integers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/add-two-integers-error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/add-two-integers-error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/char-char-test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/char-char-test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/else-error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/else-error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/missing-operator-error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/missing-operator-error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/missing-parentheses-error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/missing-parentheses-error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/if-else-nester.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/if-else.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/make-string-of-a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/simple-digit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/simple-letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/with-comment.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +87,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\CMC\LastCompiler\src\main\java\examplefiles" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dk.seahawk.scanner" />
@@ -133,7 +148,8 @@
       <workItem from="1665242990192" duration="1855000" />
       <workItem from="1665567919377" duration="3314000" />
       <workItem from="1665646777873" duration="814000" />
-      <workItem from="1665657443406" duration="1637000" />
+      <workItem from="1665657443406" duration="5820000" />
+      <workItem from="1665664353773" duration="313000" />
     </task>
     <servers />
   </component>
