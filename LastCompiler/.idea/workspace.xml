@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ASTViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/ast/ASTViewer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/Extended-Triangle-Compiler&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/CMC/JavaExample&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -113,6 +114,8 @@
       <workItem from="1665058128659" duration="1680000" />
       <workItem from="1665060004456" duration="9000" />
       <workItem from="1665242990192" duration="1855000" />
+      <workItem from="1665567919377" duration="3314000" />
+      <workItem from="1665646777873" duration="814000" />
     </task>
     <servers />
   </component>

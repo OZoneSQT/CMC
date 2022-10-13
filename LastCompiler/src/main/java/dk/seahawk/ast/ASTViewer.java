@@ -36,6 +36,8 @@ public class ASTViewer extends JFrame {
         setDefaultCloseOperation( EXIT_ON_CLOSE );
     }
 
+    //TODO Errors: ex. for( Declaration d: ((DeclarationList)ast).dec ) error at .dec => public variable
+    // Solution, Start by adding Getters and Setters for private variables
     private DefaultMutableTreeNode createTree( AST ast ) {
         DefaultMutableTreeNode node = new DefaultMutableTreeNode( "*** WHAT??? ***" );
 
