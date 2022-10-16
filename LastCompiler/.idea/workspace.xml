@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/add-two-integers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/add-two-integers-error.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/char-char-test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/else-error.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/missing-operator-error.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/expect_parser_error/missing-parentheses-error.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/if-else-nester.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/if-else.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/letter.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/make-string-of-a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/simple-digit.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/simple-letter.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/examplefiles/with-comment.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +57,6 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\CMC\LastCompiler\src\main\java\examplefiles" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dk.seahawk.scanner" />
@@ -131,9 +114,10 @@
       <workItem from="1665060004456" duration="9000" />
       <workItem from="1665242990192" duration="1855000" />
       <workItem from="1665567919377" duration="3314000" />
-      <workItem from="1665646777873" duration="814000" />
-      <workItem from="1665657443406" duration="5820000" />
-      <workItem from="1665664353773" duration="1302000" />
+      <workItem from="1665646777873" duration="852000" />
+      <workItem from="1665678560785" duration="11000" />
+      <workItem from="1665678581111" duration="26000" />
+      <workItem from="1665678617084" duration="2061000" />
     </task>
     <servers />
   </component>
