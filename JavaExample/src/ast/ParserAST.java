@@ -7,11 +7,15 @@ public class ParserAST {
 	private Scanner scan;
 	private Token currentTerminal;
 
+	//TODO Return types are added
+
+
 	public ParserAST( Scanner scan ) {
 		this.scan = scan;
 		currentTerminal = scan.scan();
 	}
 
+	//TODO Change
 	public Program parseProgram() {
 		Block block = parseBlock();
 		
@@ -21,6 +25,7 @@ public class ParserAST {
 		return new Program( block );
 	}
 
+	//TODO Change
 	private Block parseBlock() {
 		accept( DECLARE );
 		Declarations decs = parseDeclarations();
@@ -31,6 +36,7 @@ public class ParserAST {
 		return new Block( decs, stats );
 	}
 
+	//TODO Change
 	private Declarations parseDeclarations() {
 		Declarations decs = new Declarations();
 		
@@ -41,6 +47,7 @@ public class ParserAST {
 		return decs;
 	}
 
+	//TODO Change
 	private Declaration parseOneDeclaration() {
 		switch( currentTerminal.kind ) {
 			case VAR:
@@ -75,6 +82,7 @@ public class ParserAST {
 		}
 	}
 
+	//TODO Change
 	private Declarations parseIdList() {
 		Declarations list = new Declarations();
 		
@@ -88,6 +96,7 @@ public class ParserAST {
 		return list;
 	}
 
+	//TODO Change
 	private Statements parseStatements() {
 		Statements stats = new Statements();
 		
@@ -103,6 +112,7 @@ public class ParserAST {
 		return stats;
 	}
 
+	//TODO Change
 	private Statement parseOneStatement() {
 		switch( currentTerminal.kind ) {
 			case IDENTIFIER:
@@ -154,6 +164,7 @@ public class ParserAST {
 		}
 	}
 
+	//TODO Change
 	private Expression parseExpression() {
 		Expression res = parsePrimary();
 		while( currentTerminal.kind == OPERATOR ) {
@@ -166,6 +177,7 @@ public class ParserAST {
 	return res;
 	}
 
+	//TODO Change
 	private Expression parsePrimary() {
 		switch( currentTerminal.kind ) {
 			case IDENTIFIER:
@@ -213,6 +225,7 @@ public class ParserAST {
 		}
 	}
 
+	//TODO Change
 	private ExpList parseExpressionList() {
 		ExpList exps = new ExpList();
 		
@@ -225,6 +238,7 @@ public class ParserAST {
 		return exps;
 	}
 
+	//TODO Change
 	private Identifier parseIdentifier() {
 		if( currentTerminal.kind == IDENTIFIER ) {
 			Identifier res = new Identifier( currentTerminal.spelling );
@@ -238,6 +252,7 @@ public class ParserAST {
 		}
 	}
 
+	//TODO Change
 	private IntegerLiteral parseIntegerLiteral()
 	{
 		if( currentTerminal.kind == INTEGERLITERAL ) {
@@ -252,6 +267,7 @@ public class ParserAST {
 		}
 	}
 
+	//TODO Change
 	private Operator parseOperator() {
 		if( currentTerminal.kind == OPERATOR ) {
 			Operator res = new Operator( currentTerminal.spelling );
