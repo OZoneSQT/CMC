@@ -16,7 +16,6 @@ import static parser.TokenKind.*;
 public class Parser {
     private Scanner scan;
 
-
     private Token currentTerminal;
 
 

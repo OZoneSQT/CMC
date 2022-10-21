@@ -53,6 +53,7 @@ public class Main {
                 Syntax error can be detected at this level if the input is not in accordance with the grammar.
              */
             IParser parser = new Parser(scanner, errorHandler);
+            //TODO redirect to ASTParser
 
             // Semantic Analyzer
             /*
