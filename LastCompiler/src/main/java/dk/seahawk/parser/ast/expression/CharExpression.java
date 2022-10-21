@@ -1,19 +1,19 @@
 package dk.seahawk.parser.ast.expression;
 
-import dk.seahawk.parser.ast.terminal.Identifier;
+import dk.seahawk.parser.ast.terminal.CharLiteral;
 
 public class CharExpression extends Expression {
-    private Identifier name;
+    private CharLiteral name;
 
-    public CharExpression(Identifier name ) {
+    public CharExpression(CharLiteral name ) {
         this.name = name;
     }
 
-    public Identifier getName() {
+    public CharLiteral getName() {
         return name;
     }
 
-    public void setName(Identifier name) {
+    public void setName(CharLiteral name) {
         this.name = name;
     }
 

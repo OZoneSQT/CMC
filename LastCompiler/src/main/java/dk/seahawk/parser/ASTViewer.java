@@ -1,5 +1,6 @@
-package dk.seahawk.parser.ast;
+package dk.seahawk.parser;
 
+import dk.seahawk.parser.ast.AST;
 import dk.seahawk.parser.ast.declaration.Declaration;
 import dk.seahawk.parser.ast.declaration.DeclarationList;
 import dk.seahawk.parser.ast.declaration.FunctionDeclaration;
@@ -71,8 +72,7 @@ public class ASTViewer extends JFrame {
         } else if( ast instanceof IfStatement) {
             node.setUserObject("IfStatement");
             node.add(createTree(((IfStatement) ast).getExp()));
-            node.add(createTree(((IfStatement) ast).getThenPart()));
-            node.add(createTree(((IfStatement) ast).getElsePart()));
+            node.add(createTree(((IfStatement) ast).getElseExp()));
         } else if( ast instanceof ElseStatement) {
                 node.setUserObject( "ElseStatement" );
                 node.add( createTree( ((ElseStatement)ast).getExp() ) );

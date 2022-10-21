@@ -1,19 +1,19 @@
 package dk.seahawk.parser.ast.expression;
 
-import dk.seahawk.parser.ast.terminal.Identifier;
+import dk.seahawk.parser.ast.terminal.IntegerLiteral;
 
 public class IntegerExpression extends Expression {
-    private Identifier name;
+    private IntegerLiteral name;
 
-    public IntegerExpression(Identifier name ) {
+    public IntegerExpression(IntegerLiteral name ) {
         this.name = name;
     }
 
-    public Identifier getName() {
+    public IntegerLiteral getName() {
         return name;
     }
 
-    public void setName(Identifier name) {
+    public void setName(IntegerLiteral name) {
         this.name = name;
     }
 

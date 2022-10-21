@@ -1,18 +1,38 @@
-package ast;
+/*
+ * 23.08.2019 TokenKind enum introduced
+ * 02.10.2016 Minor edit, IParser gone
+ * 15.10.2010 Renamed and using IParser
+ * 29.10.2009 New package structure
+ * 05.11.2006 Else part fixed
+ * 24.10.2006 params in function declaration empty Declarations instead of null
+ * 23.10.2006 IdList replaced by Declarations for function parameters
+ * 22.10.2006 Operator precedence (non-terminals Expression1 and Expression2)
+ * 01.10.2006 AST introduced
+ * 28.09.2006 Original version (based on Watt&Brown)
+ */
+ 
+package checker;
 
-import static ast.TokenKind.*;
-import ast.ast.*;
+import checker.ast.*;
 
-public class ParserAST {
+public class ParserOperatorPrecedence
+{
 	private Scanner scan;
+	
+	
 	private Token currentTerminal;
-
-	public ParserAST( Scanner scan ) {
+	
+	
+	public ParserOperatorPrecedence( Scanner scan )
+	{
 		this.scan = scan;
+		
 		currentTerminal = scan.scan();
 	}
-
-	public Program parseProgram() {
+	
+	
+	public Object parseProgram()
+	{
 		Block block = parseBlock();
 		
 		if( currentTerminal.kind != EOT )
@@ -20,18 +40,22 @@ public class ParserAST {
 			
 		return new Program( block );
 	}
-
-	private Block parseBlock() {
+	
+	
+	private Block parseBlock()
+	{
 		accept( DECLARE );
 		Declarations decs = parseDeclarations();
 		accept( DO );
 		Statements stats = parseStatements();
 		accept( OD );
-
+		
 		return new Block( decs, stats );
 	}
-
-	private Declarations parseDeclarations() {
+	
+	
+	private Declarations parseDeclarations()
+	{
 		Declarations decs = new Declarations();
 		
 		while( currentTerminal.kind == VAR ||
@@ -40,42 +64,46 @@ public class ParserAST {
 			
 		return decs;
 	}
-
-	private Declaration parseOneDeclaration() {
+	
+	
+	private Declaration parseOneDeclaration()
+	{
 		switch( currentTerminal.kind ) {
 			case VAR:
 				accept( VAR );
 				Identifier id = parseIdentifier();
 				accept( SEMICOLON );
-
+				
 				return new VariableDeclaration( id );
-
+				
 			case FUNC:
 				accept( FUNC );
 				Identifier name = parseIdentifier();
 				accept( LEFTPARAN );
-
+				
 				Declarations params = null;
 				if( currentTerminal.kind == IDENTIFIER )
 					params = parseIdList();
 				else
 					params = new Declarations();
-
+					
 				accept( RIGHTPARAN );
 				Block block = parseBlock();
 				accept( RETURN );
 				Expression retExp = parseExpression();
 				accept( SEMICOLON );
-
+				
 				return new FunctionDeclaration( name, params, block, retExp );
-
+				
 			default:
 				System.out.println( "var or func expected" );
 				return null;
 		}
 	}
-
-	private Declarations parseIdList() {
+	
+	
+	private Declarations parseIdList()
+	{
 		Declarations list = new Declarations();
 		
 		list.dec.add( new VariableDeclaration( parseIdentifier() ) );
@@ -87,8 +115,10 @@ public class ParserAST {
 		
 		return list;
 	}
-
-	private Statements parseStatements() {
+	
+	
+	private Statements parseStatements()
+	{
 		Statements stats = new Statements();
 		
 		while( currentTerminal.kind == IDENTIFIER ||
@@ -102,8 +132,10 @@ public class ParserAST {
 			
 		return stats;
 	}
-
-	private Statement parseOneStatement() {
+	
+	
+	private Statement parseOneStatement()
+	{
 		switch( currentTerminal.kind ) {
 			case IDENTIFIER:
 			case INTEGERLITERAL:
@@ -120,11 +152,12 @@ public class ParserAST {
 				accept( THEN );
 				Statements thenPart = parseStatements();
 				
-				Statements elsePart = null;
+				Statements elsePart;
 				if( currentTerminal.kind == ELSE ) {
 					accept( ELSE );
 					elsePart = parseStatements();
-				}
+				} else
+					elsePart = new Statements();
 				
 				accept( FI );
 				accept( SEMICOLON );
@@ -153,20 +186,53 @@ public class ParserAST {
 				return null;
 		}
 	}
+	
 
-	private Expression parseExpression() {
+	private Expression parseExpression()
+	{
+		Expression res = parseExpression1();
+		
+		if( currentTerminal.isAssignOperator() ) {
+			Operator op = parseOperator();
+			Expression tmp = parseExpression();
+			
+			res = new BinaryExpression( op, res, tmp );
+		}
+		
+		return res;
+	}
+	
+	
+	private Expression parseExpression1()
+	{
+		Expression res = parseExpression2();
+		while( currentTerminal.isAddOperator() ) {
+			Operator op = parseOperator();
+			Expression tmp = parseExpression2();
+			
+			res = new BinaryExpression( op, res, tmp );
+		}
+		
+		return res;
+	}
+	
+	
+	private Expression parseExpression2()
+	{
 		Expression res = parsePrimary();
-		while( currentTerminal.kind == OPERATOR ) {
+		while( currentTerminal.isMulOperator() ) {
 			Operator op = parseOperator();
 			Expression tmp = parsePrimary();
 			
 			res = new BinaryExpression( op, res, tmp );
 		}
 		
-	return res;
+		return res;
 	}
-
-	private Expression parsePrimary() {
+	
+	
+	private Expression parsePrimary()
+	{
 		switch( currentTerminal.kind ) {
 			case IDENTIFIER:
 				Identifier name = parseIdentifier();
@@ -212,8 +278,10 @@ public class ParserAST {
 				return null;
 		}
 	}
-
-	private ExpList parseExpressionList() {
+	
+	
+	private ExpList parseExpressionList()
+	{
 		ExpList exps = new ExpList();
 		
 		exps.exp.add( parseExpression() );
@@ -224,8 +292,10 @@ public class ParserAST {
 		
 		return exps;
 	}
-
-	private Identifier parseIdentifier() {
+	
+	
+	private Identifier parseIdentifier()
+	{
 		if( currentTerminal.kind == IDENTIFIER ) {
 			Identifier res = new Identifier( currentTerminal.spelling );
 			currentTerminal = scan.scan();
@@ -237,7 +307,8 @@ public class ParserAST {
 			return new Identifier( "???" );
 		}
 	}
-
+	
+	
 	private IntegerLiteral parseIntegerLiteral()
 	{
 		if( currentTerminal.kind == INTEGERLITERAL ) {
@@ -251,8 +322,10 @@ public class ParserAST {
 			return new IntegerLiteral( "???" );
 		}
 	}
-
-	private Operator parseOperator() {
+	
+	
+	private Operator parseOperator()
+	{
 		if( currentTerminal.kind == OPERATOR ) {
 			Operator res = new Operator( currentTerminal.spelling );
 			currentTerminal = scan.scan();
@@ -264,8 +337,10 @@ public class ParserAST {
 			return new Operator( "???" );
 		}
 	}
-
-	private void accept( TokenKind expected ) {
+	
+	
+	private void accept( TokenKind expected )
+	{
 		if( currentTerminal.kind == expected )
 			currentTerminal = scan.scan();
 		else

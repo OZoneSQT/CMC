@@ -1,19 +1,19 @@
 package dk.seahawk.parser.ast.expression;
 
-import dk.seahawk.parser.ast.terminal.Identifier;
+import dk.seahawk.parser.ast.terminal.BoolType;
 
 public class BoolExpression extends Expression {
-    private Identifier name;
+    private BoolType name;
 
-    public BoolExpression(Identifier name ) {
+    public BoolExpression(BoolType name ) {
         this.name = name;
     }
 
-    public Identifier getName() {
+    public BoolType getName() {
         return name;
     }
 
-    public void setName(Identifier name) {
+    public void setName(BoolType name) {
         this.name = name;
     }
 

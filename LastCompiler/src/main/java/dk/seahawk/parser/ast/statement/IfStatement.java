@@ -4,21 +4,15 @@ import dk.seahawk.parser.ast.expression.Expression;
 
 public class IfStatement extends Statement {
     private Expression exp;
-    private StatementList thenPart;
-    private StatementList elsePart;
+    private StatementList elseExp;
 
-    public IfStatement(Expression exp, StatementList thenPart, StatementList elsePart ) {
+    public IfStatement(Expression ifExp, StatementList elseExp ) {
         this.exp = exp;
-        this.thenPart = thenPart;
-        this.elsePart = elsePart;
+        this.elseExp = elseExp;
     }
 
-    public StatementList getThenPart() {
-        return thenPart;
-    }
-
-    public StatementList getElsePart() {
-        return elsePart;
+    public StatementList getElseExp() {
+        return elseExp;
     }
 
     public Expression getExp() {
@@ -29,11 +23,7 @@ public class IfStatement extends Statement {
         this.exp = exp;
     }
 
-    public void setThenPart(StatementList thenPart) {
-        this.thenPart = thenPart;
-    }
-
     public void setElsePart(StatementList elsePart) {
-        this.elsePart = elsePart;
+        this.elseExp = elsePart;
     }
 }

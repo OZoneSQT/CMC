@@ -12,4 +12,5 @@ public abstract class Terminal extends AST {
     public void setSpelling(String spelling) {
         this.spelling = spelling;
     }
+
 }

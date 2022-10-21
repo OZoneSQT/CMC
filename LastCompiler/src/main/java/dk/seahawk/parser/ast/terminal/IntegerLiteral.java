@@ -4,6 +4,6 @@ public class IntegerLiteral extends Terminal {
 
     public IntegerLiteral( String spelling )
     {
-        this.setSpelling(spelling);
+        setSpelling(spelling);
     }
 }
