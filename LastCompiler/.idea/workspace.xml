@@ -5,60 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/IdEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/IdentificationTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ParserOperatorPrecedence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/SourceFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/TestDriverChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/TokenKind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/AST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/BinaryExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/CallExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Declaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Declarations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/ExpList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Expression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/ExpressionStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/FunctionDeclaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Identifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/IfStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/IntLitExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/IntegerLiteral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/SayStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Statement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Statements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Terminal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/UnaryExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/VarExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/VariableDeclaration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/Visitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ast/WhileStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CallExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/CharLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaExample/src/ast/ParserAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/ast/ParserAST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaExample/src/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaExample/src/checker/ParserOperatorPrecedence.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/checker/ParserOperatorPrecedence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaExample/src/checker/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaExample/src/checker/TestDriverChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/checker/TestDriverChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaExample/src/checker/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaExample/src/checker/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/IParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/IParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/ASTViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ASTViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/ParserAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BoolExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BoolExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CharExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CharExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/IntegerExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/IntegerExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/IfStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/IntegerLiteral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +129,7 @@
       <workItem from="1666270978090" duration="3049000" />
       <workItem from="1666278176140" duration="3266000" />
       <workItem from="1666344386524" duration="25305000" />
+      <workItem from="1666432848102" duration="4505000" />
     </task>
     <servers />
   </component>

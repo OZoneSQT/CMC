@@ -15,6 +15,8 @@ package checker;
 
 import checker.ast.*;
 
+import static checker.TokenKind.*;
+
 public class ParserOperatorPrecedence
 {
 	private Scanner scan;
@@ -82,7 +84,7 @@ public class ParserOperatorPrecedence
 				accept( LEFTPARAN );
 				
 				Declarations params = null;
-				if( currentTerminal.kind == IDENTIFIER )
+				if( currentTerminal.kind == IDENTIFIER)
 					params = parseIdList();
 				else
 					params = new Declarations();
@@ -186,7 +188,10 @@ public class ParserOperatorPrecedence
 				return null;
 		}
 	}
-	
+
+	private void accept(parser.TokenKind aWhile) {
+	}
+
 
 	private Expression parseExpression()
 	{

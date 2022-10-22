@@ -9,6 +9,8 @@
 package checker;
 
 
+import static checker.TokenKind.*;
+
 public class Scanner
 {
 	private SourceFile source;

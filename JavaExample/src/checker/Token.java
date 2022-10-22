@@ -11,11 +11,8 @@
  
 package checker;
 
-
-import parser.TokenKind;
-
-import static parser.TokenKind.*;
-import static parser.TokenKind.WHILE;
+import static checker.TokenKind.*;
+import static checker.TokenKind.WHILE;
 
 public class Token
 {

@@ -8,7 +8,7 @@
  
 package checker;
 
-import ast.ast.Program;
+import checker.ast.Program;
 import checker.ast.AST;
 
 
