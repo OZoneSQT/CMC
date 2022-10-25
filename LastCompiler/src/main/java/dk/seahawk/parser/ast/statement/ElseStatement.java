@@ -37,7 +37,8 @@ public class ElseStatement extends Statement {
         this.elsePart = elsePart;
     }
 
-  //  public Object visit(Visitor v. Object arg) {
+    public Object visitElseStatement(ElseStatement elseStatement, Object arg ) {
+        return elseStatement.visitElseStatement(this,arg);
+    }
 
-   // }
 }

@@ -49,4 +49,9 @@ public class FunctionDeclaration extends Declaration {
     public void setRetExp(Expression retExp) {
         this.retExp = retExp;
     }
+
+    public Object visitFunctionDeclaration(FunctionDeclaration functionDeclaration, Object arg ) {
+        return functionDeclaration.visitFunctionDeclaration(this,arg);
+    }
+
 }

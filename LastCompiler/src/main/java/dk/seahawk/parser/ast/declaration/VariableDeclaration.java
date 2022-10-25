@@ -16,4 +16,9 @@ public class VariableDeclaration extends Declaration {
     public void setIdentifier(Identifier identifier) {
         this.identifier = identifier;
     }
+
+    public Object visitVariableDeclaration(VariableDeclaration variableDeclaration, Object arg ) {
+        return variableDeclaration.visitVariableDeclaration(this,arg);
+    }
+
 }

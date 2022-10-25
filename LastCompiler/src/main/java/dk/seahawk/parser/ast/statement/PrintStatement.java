@@ -17,4 +17,9 @@ public class PrintStatement extends Statement {
     public void setExp(Expression exp) {
         this.exp = exp;
     }
+
+    public Object visitPrintStatement(PrintStatement printStatement, Object arg ) {
+        return printStatement.visitPrintStatement(this,arg);
+    }
+
 }

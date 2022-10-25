@@ -26,4 +26,9 @@ public class IfStatement extends Statement {
     public void setElsePart(StatementList elsePart) {
         this.elseExp = elsePart;
     }
+
+    public Object visitIfStatement(IfStatement ifStatement, Object arg ) {
+        return ifStatement.visitIfStatement(this,arg);
+    }
+
 }

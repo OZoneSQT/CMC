@@ -17,4 +17,7 @@ public class IntegerExpression extends Expression {
         this.name = name;
     }
 
+    public Object visitIntegerExpression(IntegerExpression integerExpression, Object arg ) {
+        return integerExpression.visitIntegerExpression(this,arg);
+    }
 }

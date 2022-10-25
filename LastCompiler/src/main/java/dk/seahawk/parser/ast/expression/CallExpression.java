@@ -10,4 +10,9 @@ public class CallExpression extends Expression {
         this.name = name;
         this.args = args;
     }
+
+    public Object visitCallExpression(CallExpression callExpression, Object arg ) {
+        return callExpression.visitCallExpression(this,arg);
+    }
+
 }

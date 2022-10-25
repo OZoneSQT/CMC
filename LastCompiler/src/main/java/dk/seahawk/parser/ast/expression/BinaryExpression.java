@@ -37,4 +37,9 @@ public class BinaryExpression extends Expression {
     public Expression getOperand2() {
         return operand2;
     }
+
+    public Object visitBinaryExpression(BinaryExpression binaryExpression, Object arg ) {
+        return binaryExpression.visitBinaryExpression(this,arg);
+    }
+
 }

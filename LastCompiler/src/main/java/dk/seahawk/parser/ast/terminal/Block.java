@@ -30,4 +30,9 @@ public class Block extends AST {
     public void setStats(StatementList stats) {
         this.stats = stats;
     }
+
+    public Object visitBlock(Block block, Object arg ) {
+        return block.visitBlock(this,arg);
+    }
+
 }

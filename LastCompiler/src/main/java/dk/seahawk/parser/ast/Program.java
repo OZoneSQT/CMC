@@ -16,4 +16,9 @@ public class Program extends AST {
     public void setProgram(Block block) {
         this.block = block;
     }
+
+    public Object visitProgram( Program program, Object arg ) {
+        return program.visitProgram(this, arg);
+    }
+
 }

@@ -17,4 +17,8 @@ public class ArrayExpression extends Expression {
         this.name = name;
     }
 
+    public Object visitArrayExpression(ArrayExpression arrayExpression, Object arg ) {
+        return arrayExpression.visitArrayExpression(this,arg);
+    }
+
 }

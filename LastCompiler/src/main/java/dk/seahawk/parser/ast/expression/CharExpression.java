@@ -17,4 +17,8 @@ public class CharExpression extends Expression {
         this.name = name;
     }
 
+    public Object visitCharExpression(CharExpression charExpression, Object arg ) {
+        return charExpression.visitCharExpression(this,arg);
+    }
+
 }

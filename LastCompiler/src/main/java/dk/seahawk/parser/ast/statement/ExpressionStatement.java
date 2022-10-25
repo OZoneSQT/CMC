@@ -16,4 +16,9 @@ public class ExpressionStatement extends Statement {
     public void setExp(Expression exp) {
         this.exp = exp;
     }
+
+    public Object visitExpressionStatement(ExpressionStatement expressionStatement, Object arg ) {
+        return expressionStatement.visitExpressionStatement(this,arg);
+    }
+
 }

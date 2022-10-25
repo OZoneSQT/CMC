@@ -17,4 +17,8 @@ public class BoolExpression extends Expression {
         this.name = name;
     }
 
+    public Object visitBoolExpression(BoolExpression boolExpression, Object arg ) {
+        return boolExpression.visitBoolExpression(this,arg);
+    }
+
 }
