@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IdEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IdEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IdentificationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IdentificationTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/ParserOperatorPrecedence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/ParserOperatorPrecedence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/CharLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/CharLiteral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +128,8 @@
       <workItem from="1666344386524" duration="25305000" />
       <workItem from="1666432848102" duration="4505000" />
       <workItem from="1666698161804" duration="6703000" />
-      <workItem from="1666859055174" duration="5543000" />
+      <workItem from="1666859055174" duration="4941000" />
+      <workItem from="1666871651402" duration="4054000" />
     </task>
     <servers />
   </component>

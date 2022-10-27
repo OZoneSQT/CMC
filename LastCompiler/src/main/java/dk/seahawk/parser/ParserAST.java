@@ -59,6 +59,7 @@ public class ParserAST implements IParser {
     public AST parse() {
         currentTerminal = scan.scan();
 
+        //TODO Check upon this content imported after EOT
         Block block = parseBlock();
         // if (currentTerminal.token != EOT) System.out.println("Tokens found after end of program");
         return new Program( block );
