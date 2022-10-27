@@ -74,7 +74,9 @@ public class Main {
              */
 
             Token token = scanner.scan();
-            AST ast = parser.parse();
+            //TODO move logger to here
+            AST ast = parser.parse();   //TODO OBS should something be parsed in "parser.parse()"
+            //TODO move Viewer to here
             checker.check();
             generator.generate();
 
@@ -86,7 +88,7 @@ public class Main {
             /*
                 SourceFile in = new SourceFile( fc.getSelectedFile().getAbsolutePath() );
                 Scanner s = new Scanner( in );
-                ParserOperatorPrecedence p = new ParserOperatorPrecedence( s );
+                ParserOperatorPrecedence p = new ParserOperatorPrecedence( s ); //TODO OBS
                 Checker c = new Checker();
 
                 AST ast = (AST) p.parseProgram();
