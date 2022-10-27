@@ -30,12 +30,12 @@ public interface IVisitor {
     Object visitExpressionStatement(ExpressionStatement expressionStatement, Object arg );
     Object visitIfStatement(IfStatement ifStatement, Object arg );
     Object visitPrintStatement(PrintStatement printStatement, Object arg );
-    Object visitUnaryStatementList(StatementList statementList, Object arg );
+    Object visitUnaryStatementList(UnaryExpression unaryExpression, Object arg );
 
 
     Object visitBlock(Block block, Object arg );
     Object visitBoolType(BoolType boolType, Object arg );
-    Object visitCharCharLiteral(CharLiteral charLiteral, Object arg );
+    Object visitCharLiteral(CharLiteral charLiteral, Object arg );
     Object visitIdentifier(Identifier identifier, Object arg );
     Object visitIntegerLiteral(IntegerLiteral integerLiteral, Object arg );
     Object visitOperator(Operator operator, Object arg );

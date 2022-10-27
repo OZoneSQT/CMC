@@ -83,6 +83,17 @@ public class Main {
 
             System.out.println("*** END *** ");
 
+            /*
+                SourceFile in = new SourceFile( fc.getSelectedFile().getAbsolutePath() );
+                Scanner s = new Scanner( in );
+                ParserOperatorPrecedence p = new ParserOperatorPrecedence( s );
+                Checker c = new Checker();
+
+                AST ast = (AST) p.parseProgram();
+                c.check( (Program) ast );
+             */
+
+
         }
     }
 

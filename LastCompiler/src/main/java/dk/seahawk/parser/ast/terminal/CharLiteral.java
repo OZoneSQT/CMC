@@ -6,8 +6,8 @@ public class CharLiteral extends Terminal {
         setSpelling(spelling);
     }
 
-    public Object visitCharCharLiteral(CharLiteral charLiteral, Object arg ) {
-        return charLiteral.visitCharCharLiteral(this,arg);
+    public Object visitCharLiteral(CharLiteral charLiteral, Object arg ) {
+        return charLiteral.visitCharLiteral(this,arg);
     }
 
 }
