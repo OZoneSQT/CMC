@@ -1,8 +1,9 @@
 package dk.seahawk.generator;
 
-import dk.seahawk.checker.IChecker;
-import dk.seahawk.utils.IErrorHandler;
+import dk.seahawk.parser.ast.Program;
 
 public interface IGenerator {
-    void generate();
+    void generate(Program program);
+
+    void saveTargetProgram(String targetName);
 }

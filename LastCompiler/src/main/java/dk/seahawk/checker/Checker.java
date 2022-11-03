@@ -16,7 +16,7 @@ public class Checker implements IChecker, IVisitor {
     private IErrorHandler errorHandler;
     private IdentificationTable idTable = new IdentificationTable();
 
-    public Checker(IParser parser, IErrorHandler errorHandler) {
+    public Checker(IErrorHandler errorHandler) {
         this.parser = parser;
         this.errorHandler = errorHandler;
     }

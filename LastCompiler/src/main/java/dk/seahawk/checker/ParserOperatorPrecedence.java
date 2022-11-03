@@ -2,6 +2,7 @@ package dk.seahawk.checker;
 
 import dk.seahawk.models.EToken;
 import dk.seahawk.models.Token;
+import dk.seahawk.parser.ast.AST;
 import dk.seahawk.parser.ast.Program;
 import dk.seahawk.parser.ast.declaration.Declaration;
 import dk.seahawk.parser.ast.declaration.DeclarationList;
@@ -13,6 +14,7 @@ import dk.seahawk.parser.ast.terminal.Block;
 import dk.seahawk.parser.ast.terminal.Identifier;
 import dk.seahawk.parser.ast.terminal.IntegerLiteral;
 import dk.seahawk.parser.ast.terminal.Operator;
+import dk.seahawk.scanner.IScanner;
 import dk.seahawk.scanner.Scanner;
 
 import static dk.seahawk.models.EToken.*;
@@ -28,7 +30,10 @@ public class ParserOperatorPrecedence {
             currentTerminal = scan.scan();
         }
 
-        public Object parseProgram() {
+    public ParserOperatorPrecedence(IScanner scanner) {
+    }
+
+    public Object parseProgram() {
             Block block = parseBlock();
 
             if( currentTerminal.token != EOT )
@@ -327,4 +332,6 @@ public class ParserOperatorPrecedence {
                 System.out.println( "Expected token of kind " + expected );
         }
 
+    public AST parse() {
     }
+}
