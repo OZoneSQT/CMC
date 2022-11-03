@@ -5,6 +5,8 @@ import dk.seahawk.parser.ast.terminal.Block;
 public class Program extends AST {
     private Block block;
 
+    public Program() {}
+
     public Program(Block block) {
         this.block = block;
     }

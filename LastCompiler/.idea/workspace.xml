@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/READ ME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/tam/Disassembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/tam/Instruction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/tam/Interpreter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/tam/Machine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +59,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/CMC/JavaExample&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Extended-Triangle-Compiler&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -130,6 +137,8 @@
       <workItem from="1666698161804" duration="6703000" />
       <workItem from="1666859055174" duration="4941000" />
       <workItem from="1666871651402" duration="4054000" />
+      <workItem from="1667463280070" duration="2950000" />
+      <workItem from="1667475376131" duration="548000" />
     </task>
     <servers />
   </component>

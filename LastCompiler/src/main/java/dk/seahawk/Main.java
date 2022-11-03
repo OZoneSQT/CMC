@@ -10,6 +10,7 @@ import dk.seahawk.parser.ASTViewer;
 import dk.seahawk.parser.IParser;
 import dk.seahawk.parser.ParserAST;
 import dk.seahawk.parser.ast.AST;
+import dk.seahawk.parser.ast.Program;
 import dk.seahawk.scanner.IScanner;
 import dk.seahawk.scanner.Scanner;
 import dk.seahawk.utils.ErrorHandler;
@@ -73,11 +74,12 @@ public class Main {
                 - Target Code Generator
              */
 
+            Program program = new Program();
             Token token = scanner.scan();
             //TODO move logger to here
             AST ast = parser.parse();   //TODO OBS should something be parsed in "parser.parse()"
             //TODO move Viewer to here
-            checker.check();
+            checker.check(program);
             generator.generate();
 
             consoleLogger(token, scanner);
