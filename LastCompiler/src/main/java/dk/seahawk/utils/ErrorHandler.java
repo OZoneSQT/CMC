@@ -24,6 +24,8 @@ public class ErrorHandler implements IErrorHandler {
             for (int i = 0; i <= errorList.size(); i++) {
                 System.out.println( "Error " + i + ": " + errorList.get(i) );
             }
+
+            System.exit( 1 );
         }
     }
 
