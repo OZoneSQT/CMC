@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/utils/ErrorHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +132,9 @@
       <workItem from="1667463280070" duration="2950000" />
       <workItem from="1667475376131" duration="2472000" />
       <workItem from="1667478581694" duration="6110000" />
+      <workItem from="1667509079029" duration="909000" />
+      <workItem from="1667727839893" duration="60000" />
+      <workItem from="1668252907209" duration="7000" />
     </task>
     <servers />
   </component>
