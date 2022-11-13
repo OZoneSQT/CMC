@@ -11,8 +11,24 @@ public class CallExpression extends Expression {
         this.args = args;
     }
 
-    public Object visitCallExpression(CallExpression callExpression, Object arg ) {
-        return callExpression.visitCallExpression(this,arg);
+    public Identifier getName() {
+        return name;
+    }
+
+    public void setName(Identifier name) {
+        this.name = name;
+    }
+
+    public ExpressionList getArgs() {
+        return args;
+    }
+
+    public void setArgs(ExpressionList args) {
+        this.args = args;
+    }
+
+    public Object visit(CallExpression callExpression, Object arg ) {
+        return callExpression.visit(this,arg);
     }
 
 }

@@ -4,12 +4,10 @@ import dk.seahawk.parser.ast.expression.Expression;
 
 public class ElseStatement extends Statement {
     private Expression exp;
-    private StatementList thenPart;
     private StatementList elsePart;
 
-    public ElseStatement(Expression exp, StatementList thenPart, StatementList elsePart ) {
+    public ElseStatement(Expression exp, StatementList elsePart ) {
         this.exp = exp;
-        this.thenPart = thenPart;
         this.elsePart = elsePart;
     }
 
@@ -21,14 +19,6 @@ public class ElseStatement extends Statement {
         this.exp = exp;
     }
 
-    public StatementList getThenPart() {
-        return thenPart;
-    }
-
-    public void setThenPart(StatementList thenPart) {
-        this.thenPart = thenPart;
-    }
-
     public StatementList getElsePart() {
         return elsePart;
     }
@@ -37,8 +27,8 @@ public class ElseStatement extends Statement {
         this.elsePart = elsePart;
     }
 
-    public Object visitElseStatement(ElseStatement elseStatement, Object arg ) {
-        return elseStatement.visitElseStatement(this,arg);
+    public Object visit(ElseStatement elseStatement, Object arg ) {
+        return elseStatement.visit(this,arg);
     }
 
 }

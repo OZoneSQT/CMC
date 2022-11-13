@@ -6,8 +6,8 @@ public class Identifier extends Terminal {
         this.setSpelling(spelling);
     }
 
-    public Object visitIdentifier(Identifier identifier, Object arg ) {
-        return identifier.visitIdentifier(this,arg);
+    public Object visit(Identifier identifier, Object arg ) {
+        return identifier.visit(this,arg);
     }
 
 }

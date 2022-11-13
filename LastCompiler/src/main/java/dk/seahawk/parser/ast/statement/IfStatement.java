@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.statement;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 
 public class IfStatement extends Statement {
@@ -27,8 +28,8 @@ public class IfStatement extends Statement {
         this.elseExp = elsePart;
     }
 
-    public Object visitIfStatement(IfStatement ifStatement, Object arg ) {
-        return ifStatement.visitIfStatement(this,arg);
+    public Object visit(IfStatement ifStatement, Object arg ) {
+        return ifStatement.visit(this,arg);
     }
 
 }

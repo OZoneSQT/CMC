@@ -9,7 +9,6 @@
 package generator;
 
 
-import static generator.TokenKind.*;
 
 
 public class Scanner

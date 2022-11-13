@@ -6,8 +6,8 @@ public class IntegerLiteral extends Terminal {
         setSpelling(spelling);
     }
 
-    public Object visitIntegerLiteral(IntegerLiteral integerLiteral, Object arg ) {
-        return integerLiteral.visitIntegerLiteral(this,arg);
+    public Object visit(IntegerLiteral integerLiteral, Object arg ) {
+        return integerLiteral.visit(this,arg);
     }
 
 }

@@ -18,8 +18,8 @@ public class PrintStatement extends Statement {
         this.exp = exp;
     }
 
-    public Object visitPrintStatement(PrintStatement printStatement, Object arg ) {
-        return printStatement.visitPrintStatement(this,arg);
+    public Object visit(PrintStatement printStatement, Object arg ) {
+        return printStatement.visit(this,arg);
     }
 
 }

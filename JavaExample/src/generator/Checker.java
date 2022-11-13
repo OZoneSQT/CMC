@@ -9,7 +9,7 @@ package generator;
 
 
 import java.util.*;
-
+import generator.ast.*;
 
 public class Checker
 	implements Visitor

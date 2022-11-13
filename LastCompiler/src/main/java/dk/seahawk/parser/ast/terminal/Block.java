@@ -31,8 +31,8 @@ public class Block extends AST {
         this.stats = stats;
     }
 
-    public Object visitBlock(Block block, Object arg ) {
-        return block.visitBlock(this,arg);
+    public Object visit(Block block, Object arg ) {
+        return block.visit(this,arg);
     }
 
 }

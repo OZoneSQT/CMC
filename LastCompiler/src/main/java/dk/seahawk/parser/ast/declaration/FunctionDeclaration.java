@@ -50,8 +50,8 @@ public class FunctionDeclaration extends Declaration {
         this.retExp = retExp;
     }
 
-    public Object visitFunctionDeclaration(FunctionDeclaration functionDeclaration, Object arg ) {
-        return functionDeclaration.visitFunctionDeclaration(this,arg);
+    public Object visit(FunctionDeclaration functionDeclaration, Object arg ) {
+        return functionDeclaration.visit(this,arg);
     }
 
 }

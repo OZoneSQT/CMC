@@ -9,9 +9,7 @@
 package generator.ast;
 
 
-public class Program
-	extends AST
-{
+public class Program extends AST {
 	public Block block;
 	
 	
@@ -25,4 +23,5 @@ public class Program
 	{
 		return v.visitProgram( this, arg );
 	}
+
 }

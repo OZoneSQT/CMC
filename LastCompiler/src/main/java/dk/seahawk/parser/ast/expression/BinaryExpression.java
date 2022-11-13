@@ -38,8 +38,8 @@ public class BinaryExpression extends Expression {
         return operand2;
     }
 
-    public Object visitBinaryExpression(BinaryExpression binaryExpression, Object arg ) {
-        return binaryExpression.visitBinaryExpression(this,arg);
+    public Object visit(BinaryExpression binaryExpression, Object arg ) {
+        return binaryExpression.visit(this,arg);
     }
 
 }

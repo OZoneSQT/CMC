@@ -28,8 +28,8 @@ public class UnaryExpression extends Expression {
         this.operand = operand;
     }
 
-    public Object visitUnaryExpression(UnaryExpression unaryExpression, Object arg ) {
-        return unaryExpression.visitUnaryExpression(this,arg);
+    public Object visit(UnaryExpression unaryExpression, Object arg ) {
+        return unaryExpression.visit(this,arg);
     }
 
 }

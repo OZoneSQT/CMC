@@ -8,7 +8,7 @@ package generator;
 
 
 import TAM.*;
-import generator.Address;
+import generator.ast.*;
 
 import java.io.*;
 

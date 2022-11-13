@@ -10,10 +10,6 @@
  */
  
 package generator;
-
-
-import generator.TokenKind;
-
 import static generator.TokenKind.*;
 
 

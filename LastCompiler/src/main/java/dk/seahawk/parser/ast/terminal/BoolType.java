@@ -9,8 +9,8 @@ public class BoolType extends Terminal {
         setSpelling(spelling);
     }
 
-    public Object visitBoolType(BoolType boolType, Object arg ) {
-        return boolType.visitBoolType(this,arg);
+    public Object visit(BoolType boolType, Object arg ) {
+        return boolType.visit(this,arg);
     }
 
 }

@@ -17,8 +17,8 @@ public class VariableDeclaration extends Declaration {
         this.identifier = identifier;
     }
 
-    public Object visitVariableDeclaration(VariableDeclaration variableDeclaration, Object arg ) {
-        return variableDeclaration.visitVariableDeclaration(this,arg);
+    public Object visit(VariableDeclaration variableDeclaration, Object arg ) {
+        return variableDeclaration.visit(this,arg);
     }
 
 }

@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.statement;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 
 public class ExpressionStatement extends Statement {
@@ -17,8 +18,8 @@ public class ExpressionStatement extends Statement {
         this.exp = exp;
     }
 
-    public Object visitExpressionStatement(ExpressionStatement expressionStatement, Object arg ) {
-        return expressionStatement.visitExpressionStatement(this,arg);
+    public Object visit(ExpressionStatement expressionStatement, Object arg ) {
+        return expressionStatement.visit(this,arg);
     }
 
 }

@@ -14,8 +14,7 @@
 package generator;
 
 
-import static generator.TokenKind.*;
-
+import generator.ast.*;
 
 public class ParserOperatorPrecedence
 {

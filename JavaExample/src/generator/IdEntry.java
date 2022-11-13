@@ -5,7 +5,7 @@
  */
  
 package generator;
-
+import generator.ast.*;
 
 public class IdEntry
 {

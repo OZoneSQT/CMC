@@ -9,7 +9,7 @@ package generator;
 
 
 import javax.swing.*;
-
+import generator.ast.*;
 
 public class Compiler
 {

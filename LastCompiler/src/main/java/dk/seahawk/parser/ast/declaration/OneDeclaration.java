@@ -2,8 +2,8 @@ package dk.seahawk.parser.ast.declaration;
 
 public class OneDeclaration {
 
-    public Object visitOneDeclaration(OneDeclaration oneDeclaration, Object arg ) {
-        return oneDeclaration.visitOneDeclaration(this,arg);
+    public Object visiOneDeclaration(OneDeclaration oneDeclaration, Object arg ) {
+        return oneDeclaration.visit(this,arg);
     }
 }
 

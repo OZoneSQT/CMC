@@ -21,7 +21,7 @@ public interface IVisitor {
     Object visitBoolExpression(BoolExpression boolExpression, Object arg );
     Object visitCallExpression(CallExpression callExpression, Object arg );
     Object visitCharExpression(CharExpression charExpression, Object arg );
-    Object visitVariableDeclaration(ExpressionList expressionList, Object arg );
+
     Object visitIntegerExpression(IntegerExpression integerExpression, Object arg );
     Object visitUnaryExpression(UnaryExpression unaryExpression, Object arg );
 
