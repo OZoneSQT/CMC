@@ -9,8 +9,8 @@ import java.util.Vector;
 public class DeclarationList extends AST {
     public Vector<Declaration> declarations = new Vector<>();
 
-    public Object visit(Checker declarationList, Object arg ) {
-        return declarationList.visit(this, arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitDeclarationList(this,arg);
     }
 
 }

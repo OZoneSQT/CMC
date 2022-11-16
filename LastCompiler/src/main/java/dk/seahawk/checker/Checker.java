@@ -12,18 +12,15 @@ import java.util.Vector;
 
 public class Checker implements IChecker, IVisitor {
 
-    private IParser parser;
     private IErrorHandler errorHandler;
     private IdentificationTable idTable = new IdentificationTable();
 
     public Checker(IErrorHandler errorHandler) {
-        this.parser = parser;
         this.errorHandler = errorHandler;
     }
 
     @Override
-    public void check( Program program )
-    {
+    public void check( Program program ) {
         program.visitProgram( this, null );
     }
 
@@ -103,8 +100,8 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitCallExpression(CallExpression callExpression, Object arg) {
-        String id = (String) callExpression.name.visit( this, null );
-        Vector<Type> t = (Vector<Type>)( callExpression.args.visit( this, null ) );
+        String id = (String) callExpression.getName().visit( this, null );
+        Vector<Type> t = (Vector<Type>)( callExpression.getExpressionList().visit( this, null ) );
 
         Declaration declaration = idTable.retrieve( id );
         if( declaration == null )
@@ -114,7 +111,7 @@ public class Checker implements IChecker, IVisitor {
         else {
             FunctionDeclaration functionDeclaration = (FunctionDeclaration) declaration;
             //TODO ?
-            callExpression.args = functionDeclaration;
+            callExpression.setFunctionDeclaration(functionDeclaration);
 
             if( functionDeclaration.getParams().declarations.size() != t.size() )
                 System.out.println( "Incorrect number of arguments in call to " + id );
@@ -149,6 +146,11 @@ public class Checker implements IChecker, IVisitor {
     }
 
     @Override
+    public Object visitExpressionList(ExpressionList expressionList, Object arg) {
+        return null;
+    }
+
+    @Override
     public Object visitElseStatement(ElseStatement elseStatement, Object arg) {
         elseStatement.getExp().visit( this, null );
         elseStatement.getElsePart().visit( this, null );
@@ -158,7 +160,7 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitExpressionStatement(ExpressionStatement expressionStatement, Object arg) {
-        expressionStatement.getExp().visit( this, null );
+        expressionStatement.getExpression().visit( this, null );
 
         return null;
     }
@@ -177,13 +179,18 @@ public class Checker implements IChecker, IVisitor {
     }
 
     @Override
+    public Object visitStatementList(StatementList statementList, Object arg) {
+        return null;
+    }
+
+
     public Object visitUnaryStatementList(UnaryExpression unaryExpression, Object arg) {
         return null;
     }
 
     @Override
     public Object visitBlock(Block block, Object arg) {
-        block.getDecs().visitDeclarationList(this, null);
+        block.getDecs().visit(this, null);
         block.getStats().visit(this,null);
 
         return null;

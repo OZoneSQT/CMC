@@ -1,38 +1,38 @@
 package dk.seahawk.parser.ast.terminal;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.AST;
 import dk.seahawk.parser.ast.declaration.DeclarationList;
 import dk.seahawk.parser.ast.statement.StatementList;
 
 public class Block extends AST {
 
+    private DeclarationList declarationList;
+    private StatementList statementList;
 
-    private DeclarationList decs;
-    private StatementList stats;
-
-    public Block(DeclarationList decs, StatementList stats ) {
-        this.decs = decs;
-        this.stats = stats;
+    public Block(DeclarationList declarationList, StatementList statementList ) {
+        this.declarationList = declarationList;
+        this.statementList = statementList;
     }
 
     public DeclarationList getDecs() {
-        return decs;
+        return declarationList;
     }
 
     public StatementList getStats() {
-        return stats;
+        return statementList;
     }
 
-    public void setDecs(DeclarationList decs) {
-        this.decs = decs;
+    public void setDeclarationList(DeclarationList declarationList) {
+        this.declarationList = declarationList;
     }
 
-    public void setStats(StatementList stats) {
-        this.stats = stats;
+    public void setStats(StatementList statementList) {
+        this.statementList = statementList;
     }
 
-    public Object visit(Block block, Object arg ) {
-        return block.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitBlock( this, arg);
     }
 
 }

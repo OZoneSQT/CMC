@@ -68,7 +68,7 @@ public class ASTViewer extends JFrame {
                 node.add( createTree( s ) );
         } else if( ast instanceof ExpressionStatement) {
             node.setUserObject( "ExpressionStatement" );
-            node.add( createTree( ((ExpressionStatement)ast).getExp() ) );
+            node.add( createTree( ((ExpressionStatement)ast).getExpression() ) );
         } else if( ast instanceof IfStatement) {
             node.setUserObject("IfStatement");
             node.add(createTree(((IfStatement) ast).getExp()));
@@ -76,7 +76,6 @@ public class ASTViewer extends JFrame {
         } else if( ast instanceof ElseStatement) {
                 node.setUserObject( "ElseStatement" );
                 node.add( createTree( ((ElseStatement)ast).getExp() ) );
-                node.add( createTree( ((ElseStatement)ast).getThenPart() ) );
                 node.add( createTree( ((ElseStatement)ast).getElsePart() ) );
         } else if( ast instanceof PrintStatement) {
             node.setUserObject( "PrintStatement" );

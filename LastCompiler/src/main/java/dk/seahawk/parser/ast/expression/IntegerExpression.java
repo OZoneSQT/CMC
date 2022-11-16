@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.IntegerLiteral;
 
 public class IntegerExpression extends Expression {
@@ -17,7 +18,8 @@ public class IntegerExpression extends Expression {
         this.name = name;
     }
 
-    public Object visit(IntegerExpression integerExpression, Object arg ) {
-        return integerExpression.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitIntegerExpression(this, arg);
     }
+
 }

@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.Operator;
 
 public class BinaryExpression extends Expression {
@@ -38,8 +39,8 @@ public class BinaryExpression extends Expression {
         return operand2;
     }
 
-    public Object visit(BinaryExpression binaryExpression, Object arg ) {
-        return binaryExpression.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitBinaryExpression(this, arg);
     }
 
 }

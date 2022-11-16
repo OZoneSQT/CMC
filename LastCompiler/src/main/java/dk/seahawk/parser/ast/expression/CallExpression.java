@@ -1,14 +1,18 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
+import dk.seahawk.parser.ast.declaration.FunctionDeclaration;
 import dk.seahawk.parser.ast.terminal.Identifier;
 
 public class CallExpression extends Expression {
-    public Identifier name;
-    public ExpressionList args;
+    private Identifier name;
+    private ExpressionList expressionList;
+    private FunctionDeclaration functionDeclaration;
 
-    public CallExpression( Identifier name, ExpressionList args ) {
+
+    public CallExpression(Identifier name, ExpressionList expressionList) {
         this.name = name;
-        this.args = args;
+        this.expressionList = expressionList;
     }
 
     public Identifier getName() {
@@ -19,16 +23,25 @@ public class CallExpression extends Expression {
         this.name = name;
     }
 
-    public ExpressionList getArgs() {
-        return args;
+    public ExpressionList getExpressionList() {
+        return expressionList;
     }
 
-    public void setArgs(ExpressionList args) {
-        this.args = args;
+    public void setExpressionList(ExpressionList expressionList) {
+        this.expressionList = expressionList;
     }
 
-    public Object visit(CallExpression callExpression, Object arg ) {
-        return callExpression.visit(this,arg);
+    public FunctionDeclaration getFunctionDeclaration() {
+        return functionDeclaration;
+    }
+
+    public void setFunctionDeclaration(FunctionDeclaration functionDeclaration) {
+        this.functionDeclaration = functionDeclaration;
+    }
+
+    @Override
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitCallExpression(this, null);
     }
 
 }

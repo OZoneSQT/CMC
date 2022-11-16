@@ -1,9 +1,12 @@
 package dk.seahawk.parser.ast.declaration;
 
+import dk.seahawk.checker.IVisitor;
+
 public class OneDeclaration {
 
-    public Object visiOneDeclaration(OneDeclaration oneDeclaration, Object arg ) {
-        return oneDeclaration.visit(this,arg);
+    public Object visitOneDeclaration(IVisitor visitor, Object arg ) {
+        return visitor.visitOneDeclaration(this, arg);
     }
+
 }
 

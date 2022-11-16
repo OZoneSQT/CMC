@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="" />
+    <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ASTViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ASTViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/DeclarationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/DeclarationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/OneDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/OneDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/ArrayExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/ArrayExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BoolExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/BoolExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CallExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CharExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/CharExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/ExpressionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/ExpressionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/IntegerExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/IntegerExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/expression/UnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/ElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/ElseStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/ExpressionStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/ExpressionStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/IfStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/StatementList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/statement/StatementList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/CharLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/CharLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Identifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Identifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/IntegerLiteral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/IntegerLiteral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/Operator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,6 +164,7 @@
       <workItem from="1668252907209" duration="7000" />
       <workItem from="1668253162520" duration="18186000" />
       <workItem from="1668375371201" duration="934000" />
+      <workItem from="1668609396936" duration="6551000" />
     </task>
     <servers />
   </component>

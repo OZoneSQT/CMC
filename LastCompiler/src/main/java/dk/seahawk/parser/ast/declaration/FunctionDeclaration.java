@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.declaration;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 import dk.seahawk.parser.ast.terminal.Block;
 import dk.seahawk.parser.ast.terminal.Identifier;
@@ -50,8 +51,9 @@ public class FunctionDeclaration extends Declaration {
         this.retExp = retExp;
     }
 
-    public Object visit(FunctionDeclaration functionDeclaration, Object arg ) {
-        return functionDeclaration.visit(this,arg);
+    @Override
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitFunctionDeclaration(this, arg);
     }
 
 }

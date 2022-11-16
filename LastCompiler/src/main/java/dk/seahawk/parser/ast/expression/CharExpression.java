@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.CharLiteral;
 
 public class CharExpression extends Expression {
@@ -17,8 +18,8 @@ public class CharExpression extends Expression {
         this.name = name;
     }
 
-    public Object visit(CharExpression charExpression, Object arg ) {
-        return charExpression.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitCharExpression(this,arg);
     }
 
 }

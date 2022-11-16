@@ -4,22 +4,22 @@ import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 
 public class ExpressionStatement extends Statement {
-    private Expression exp;
+    private Expression expression;
 
-    public ExpressionStatement(Expression exp ) {
-        this.exp = exp;
+    public ExpressionStatement(Expression expression ) {
+        this.expression = expression;
     }
 
-    public Expression getExp() {
-        return exp;
+    public Expression getExpression() {
+        return expression;
     }
 
-    public void setExp(Expression exp) {
-        this.exp = exp;
+    public void setExpression(Expression expression) {
+        this.expression = expression;
     }
 
-    public Object visit(ExpressionStatement expressionStatement, Object arg ) {
-        return expressionStatement.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitExpressionStatement( this, arg);
     }
 
 }

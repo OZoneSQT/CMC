@@ -10,6 +10,7 @@ public interface IVisitor {
 
     Object visitProgram( Program p, Object arg );
 
+
     Object visitDeclarationList(DeclarationList declarationList, Object arg );
     Object visitFunctionDeclaration(FunctionDeclaration functionDeclaration, Object arg );
     Object visitOneDeclaration(OneDeclaration oneDeclaration, Object arg );
@@ -21,16 +22,16 @@ public interface IVisitor {
     Object visitBoolExpression(BoolExpression boolExpression, Object arg );
     Object visitCallExpression(CallExpression callExpression, Object arg );
     Object visitCharExpression(CharExpression charExpression, Object arg );
-
     Object visitIntegerExpression(IntegerExpression integerExpression, Object arg );
     Object visitUnaryExpression(UnaryExpression unaryExpression, Object arg );
+    Object visitExpressionList(ExpressionList expressionList, Object arg );
 
 
     Object visitElseStatement(ElseStatement elseStatement, Object arg );
     Object visitExpressionStatement(ExpressionStatement expressionStatement, Object arg );
     Object visitIfStatement(IfStatement ifStatement, Object arg );
     Object visitPrintStatement(PrintStatement printStatement, Object arg );
-    Object visitUnaryStatementList(UnaryExpression unaryExpression, Object arg );
+    Object visitStatementList(StatementList statementList, Object arg );
 
 
     Object visitBlock(Block block, Object arg );

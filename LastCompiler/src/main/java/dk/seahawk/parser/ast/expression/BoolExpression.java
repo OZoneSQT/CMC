@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.BoolType;
 
 public class BoolExpression extends Expression {
@@ -17,8 +18,8 @@ public class BoolExpression extends Expression {
         this.name = name;
     }
 
-    public Object visit(BoolExpression boolExpression, Object arg ) {
-        return boolExpression.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitBoolExpression(this,arg);
     }
 
 }

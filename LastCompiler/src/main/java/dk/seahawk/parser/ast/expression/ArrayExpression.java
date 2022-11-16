@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.expression;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.Identifier;
 
 public class ArrayExpression extends Expression {
@@ -17,8 +18,8 @@ public class ArrayExpression extends Expression {
         this.name = name;
     }
 
-    public Object visit(ArrayExpression arrayExpression, Object arg ) {
-        return arrayExpression.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitArrayExpression(this,arg);
     }
 
 }

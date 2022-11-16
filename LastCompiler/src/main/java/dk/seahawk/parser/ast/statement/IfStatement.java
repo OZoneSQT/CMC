@@ -28,8 +28,8 @@ public class IfStatement extends Statement {
         this.elseExp = elsePart;
     }
 
-    public Object visit(IfStatement ifStatement, Object arg ) {
-        return ifStatement.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitIfStatement( this, arg);
     }
 
 }

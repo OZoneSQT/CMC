@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.terminal;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.CallExpression;
 
 public class BoolType extends Terminal {
@@ -9,8 +10,8 @@ public class BoolType extends Terminal {
         setSpelling(spelling);
     }
 
-    public Object visit(BoolType boolType, Object arg ) {
-        return boolType.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitBoolType( this, arg);
     }
 
 }

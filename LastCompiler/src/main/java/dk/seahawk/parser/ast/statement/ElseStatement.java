@@ -1,22 +1,23 @@
 package dk.seahawk.parser.ast.statement;
 
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 
 public class ElseStatement extends Statement {
-    private Expression exp;
+    private Expression expression;
     private StatementList elsePart;
 
-    public ElseStatement(Expression exp, StatementList elsePart ) {
-        this.exp = exp;
+    public ElseStatement(Expression expression, StatementList elsePart ) {
+        this.expression = expression;
         this.elsePart = elsePart;
     }
 
     public Expression getExp() {
-        return exp;
+        return expression;
     }
 
-    public void setExp(Expression exp) {
-        this.exp = exp;
+    public void setExp(Expression expression) {
+        this.expression = expression;
     }
 
     public StatementList getElsePart() {
@@ -27,8 +28,8 @@ public class ElseStatement extends Statement {
         this.elsePart = elsePart;
     }
 
-    public Object visit(ElseStatement elseStatement, Object arg ) {
-        return elseStatement.visit(this,arg);
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitElseStatement( this, arg);
     }
 
 }
