@@ -147,7 +147,12 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitExpressionList(ExpressionList expressionList, Object arg) {
-        return null;
+        Vector<Type> types = new Vector<Type>();
+
+        for( Expression exp: expressionList.expression )
+            types.add( (Type) exp.visit( this, null ) );
+
+        return types;
     }
 
     @Override
@@ -180,13 +185,29 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitStatementList(StatementList statementList, Object arg) {
+        for( Statement stat: statementList.statements )
+            stat.visit( this, null );
+
         return null;
     }
 
 
-    public Object visitUnaryStatementList(UnaryExpression unaryExpression, Object arg) {
-        return null;
+    //TODO check if a variable is declared in scope
+        public Object visitVarExpression( VarExpression v, Object arg ) {
+        String id = (String) v.name.visit( this, null );
+
+        Declaration d = idTable.retrieve( id );
+        if( d == null )
+            System.out.println( id + " is not declared" );
+        else if( !( d instanceof VariableDeclaration ) )
+            System.out.println( id + " is not a variable" );
+        else
+            v.decl = (VariableDeclaration) d;
+
+        return new Type( false );
     }
+
+
 
     @Override
     public Object visitBlock(Block block, Object arg) {
