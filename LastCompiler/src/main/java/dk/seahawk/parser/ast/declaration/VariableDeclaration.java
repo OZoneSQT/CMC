@@ -5,6 +5,7 @@ import dk.seahawk.parser.ast.terminal.Identifier;
 
 public class VariableDeclaration extends Declaration {
     private Identifier identifier;
+    private VariableDeclaration variableDeclaration;
 
     public VariableDeclaration( Identifier identifier ) {
         this.identifier = identifier;

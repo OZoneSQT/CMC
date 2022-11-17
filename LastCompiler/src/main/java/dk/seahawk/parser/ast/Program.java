@@ -1,6 +1,7 @@
 package dk.seahawk.parser.ast;
 
 import dk.seahawk.checker.Checker;
+import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.terminal.Block;
 
 public class Program extends AST {
@@ -20,8 +21,8 @@ public class Program extends AST {
         this.block = block;
     }
 
-    public Object visitProgram(Checker program, Object arg ) {
-        return program.visitProgram(this, arg);
+    @Override
+    public Object visit(IVisitor visitor, Object arg) {
+        return visitor.visitProgram(this, arg);
     }
-
 }

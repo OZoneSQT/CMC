@@ -19,6 +19,7 @@ public class Checker implements IChecker, IVisitor {
         this.errorHandler = errorHandler;
     }
 
+    //TODO
     @Override
     public void check( Program program ) {
         program.visitProgram( this, null );
@@ -74,9 +75,17 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitArrayExpression(ArrayExpression arrayExpression, Object arg) {
-        arrayExpression.getName().visit( this, true );
+        String id = (String) arrayExpression.getName().visit( this, true );
 
-        return new Type( true );
+        Declaration declaration = idTable.retrieve(id);
+        if (declaration == null)
+            System.out.println( id + " is not declared" );
+        else if( !( declaration instanceof VariableDeclaration ) )
+            System.out.println( id + " is not a variable" );
+        else
+            arrayExpression.setDeclaration((VariableDeclaration) declaration);
+
+        return new Type( false );
     }
 
     @Override
@@ -93,9 +102,17 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitBoolExpression(BoolExpression boolExpression, Object arg) {
-        boolExpression.getName().visit( this, true );
+        String id = (String) boolExpression.getName().visit( this, true );
 
-        return new Type( true );
+        Declaration declaration = idTable.retrieve(id);
+        if (declaration == null)
+            System.out.println( id + " is not declared" );
+        else if( !( declaration instanceof VariableDeclaration ) )
+            System.out.println( id + " is not a variable" );
+        else
+            boolExpression.setDeclaration((VariableDeclaration) declaration);
+
+        return new Type( false );
     }
 
     @Override
@@ -110,7 +127,7 @@ public class Checker implements IChecker, IVisitor {
             System.out.println( id + " is not a function" );
         else {
             FunctionDeclaration functionDeclaration = (FunctionDeclaration) declaration;
-            //TODO ?
+
             callExpression.setFunctionDeclaration(functionDeclaration);
 
             if( functionDeclaration.getParams().declarations.size() != t.size() )
@@ -122,16 +139,32 @@ public class Checker implements IChecker, IVisitor {
 
     @Override
     public Object visitCharExpression(CharExpression charExpression, Object arg) {
-        charExpression.getName().visit( this, true );
+        String id = (String) charExpression.getName().visit( this, true );
 
-        return new Type( true );
+        Declaration declaration = idTable.retrieve(id);
+        if (declaration == null)
+            System.out.println( id + " is not declared" );
+        else if( !( declaration instanceof VariableDeclaration ) )
+            System.out.println( id + " is not a variable" );
+        else
+            charExpression.setDeclaration((VariableDeclaration) declaration);
+
+        return new Type( false );
     }
 
     @Override
     public Object visitIntegerExpression(IntegerExpression integerExpression, Object arg) {
-        integerExpression.getName().visit( this, true );
+        String id = (String) integerExpression.getName().visit( this, true );
 
-        return new Type( true );
+        Declaration declaration = idTable.retrieve(id);
+        if (declaration == null)
+            System.out.println( id + " is not declared" );
+        else if( !( declaration instanceof VariableDeclaration ) )
+            System.out.println( id + " is not a variable" );
+        else
+            integerExpression.setDeclaration((VariableDeclaration) declaration);
+
+        return new Type( false );
     }
 
     @Override
@@ -190,24 +223,6 @@ public class Checker implements IChecker, IVisitor {
 
         return null;
     }
-
-
-    //TODO check if a variable is declared in scope
-        public Object visitVarExpression( VarExpression v, Object arg ) {
-        String id = (String) v.name.visit( this, null );
-
-        Declaration d = idTable.retrieve( id );
-        if( d == null )
-            System.out.println( id + " is not declared" );
-        else if( !( d instanceof VariableDeclaration ) )
-            System.out.println( id + " is not a variable" );
-        else
-            v.decl = (VariableDeclaration) d;
-
-        return new Type( false );
-    }
-
-
 
     @Override
     public Object visitBlock(Block block, Object arg) {
