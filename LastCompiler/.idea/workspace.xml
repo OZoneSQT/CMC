@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Encoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/READ ME" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/READ ME" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +142,7 @@
       <workItem from="1668253162520" duration="18186000" />
       <workItem from="1668375371201" duration="934000" />
       <workItem from="1668609396936" duration="8938000" />
+      <workItem from="1668687751311" duration="6914000" />
     </task>
     <servers />
   </component>
