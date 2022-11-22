@@ -1,8 +1,7 @@
 package dk.seahawk.parser;
 
-import dk.seahawk.scanner.IScanner;
-import dk.seahawk.utils.IErrorHandler;
+import dk.seahawk.parser.ast.AST;
 
 public interface IParser {
-    void parse();
+    AST parse();
 }

@@ -2,12 +2,14 @@ package dk.seahawk;
 
 import dk.seahawk.checker.Checker;
 import dk.seahawk.checker.IChecker;
+import dk.seahawk.checker.ParserOperatorPrecedence;
 import dk.seahawk.generator.Generator;
 import dk.seahawk.generator.IGenerator;
 import dk.seahawk.models.EToken;
 import dk.seahawk.models.Token;
-import dk.seahawk.parser.IParser;
-import dk.seahawk.parser.Parser;
+import dk.seahawk.parser.ASTViewer;
+import dk.seahawk.parser.ast.AST;
+import dk.seahawk.parser.ast.Program;
 import dk.seahawk.scanner.IScanner;
 import dk.seahawk.scanner.Scanner;
 import dk.seahawk.utils.ErrorHandler;
@@ -22,9 +24,11 @@ import javax.swing.*;
  *
  * By Michel Sommer and Patrick Christiansen
  */
+
 public class Main {
-    private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
-    //private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
+    //private static final String EXAMPLES_DIR = "d:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
+    private static final String EXAMPLES_DIR = "e:\\GitHub\\CMC\\LastCompiler\\src\\main\\java\\examplefiles";
+    private static boolean debugMode = true;    //TODO set to true for debugging
 
     public static void main(String args[]) throws InterruptedException {
         JFileChooser jFileChooser = new JFileChooser(EXAMPLES_DIR);
@@ -32,6 +36,7 @@ public class Main {
         /* JFileChooser = Dialog for selecting source file */
         if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             SourceHandler sourceHandler = new SourceHandler(jFileChooser.getSelectedFile().getAbsolutePath());
+
             IErrorHandler errorHandler = new ErrorHandler();
 
             // Tokens, Lexical Analyzer
@@ -52,37 +57,69 @@ public class Main {
 
                 Syntax error can be detected at this level if the input is not in accordance with the grammar.
              */
-            IParser parser = new Parser(scanner, errorHandler);
+            //IParser parser = new Parser(scanner, errorHandler);
+            //IParser parser = new ParserAST(scanner, errorHandler);
+            ParserOperatorPrecedence parser = new ParserOperatorPrecedence( scanner );
 
             // Semantic Analyzer
             /*
                 It verifies the parse tree, whether it’s meaningful or not. It furthermore produces a verified parse tree.
                 It also does type checking, Label checking, and Flow control checking.
              */
-            IChecker checker = new Checker(parser, errorHandler);
+            IChecker checker = new Checker(errorHandler);
 
             // Code Generator
-            IGenerator generator = new Generator(checker, errorHandler);
+            IGenerator generator = new Generator(errorHandler);
 
             /*  Additional steps:
                 - Code Optimization
                 - Target Code Generator
              */
 
+            Program program = (Program) parser.parseProgram();
             Token token = scanner.scan();
-            parser.parse();
-            checker.check();
-            generator.generate();
+            if ( debugMode ) consoleLogger(token, scanner);
 
-            // Log to console
-            while (token.token != EToken.EOT) {
-                System.out.println(token.token + " " + token.spelling);
-                token = scanner.scan();
+            //AST ast = parser.parse();
+            //printAST(ast);
+
+            checker.check(program);
+            generator.generate(program);
+
+            boolean success = errorHandler.isSuccess();
+            if ( debugMode ) {
+                exportProgram(generator, jFileChooser);
+            } else {
+                if ( success ) exportProgram(generator, jFileChooser);
             }
 
             System.out.println("*** END *** ");
-
         }
+    }
+
+    // Log to console
+    private static void consoleLogger(Token token, IScanner scanner ) {
+        while (token.token != EToken.EOT) {
+            System.out.println(token.token + " " + token.spelling);
+            token = scanner.scan();
+        }
+    }
+
+    private static void printAST(AST ast) {
+        new ASTViewer( ast );
+    }
+
+    // Get path and filename to output file
+    private static void exportProgram(IGenerator generator, JFileChooser jFileChooser) {
+        String sourceName = jFileChooser.getSelectedFile().getAbsolutePath();
+        String targetName;
+        if ( sourceName.endsWith(".txt") ) {
+            targetName = sourceName.substring(4, sourceName.length() -4 ) + ".tam";
+        } else {
+            targetName = sourceName + ".tam";
+        }
+
+        generator.saveTargetProgram( targetName );
     }
 
 }

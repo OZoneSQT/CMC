@@ -1,6 +1,7 @@
 package dk.seahawk.parser;
 
 import dk.seahawk.models.*;
+import dk.seahawk.parser.ast.AST;
 import dk.seahawk.scanner.IScanner;
 import dk.seahawk.utils.IErrorHandler;
 
@@ -48,9 +49,10 @@ public class Parser implements IParser {
         this.errorHandler = errorHandler;
     }
 
-    public void parse() {
+    public AST parse() {
         currentTerminal = scan.scan();
         parseProgram();
+        return null;
     }
 
     // Program ::= Block

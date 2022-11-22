@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/char-char-test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Encoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/READ ME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +25,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,12 +59,17 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/Extended-Triangle-Compiler&quot;
+    &quot;last_directory_selection&quot;: &quot;E:/GitHub/CMC/LastCompiler/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Extended-Triangle-Compiler&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dk.seahawk.checker" />
+      <recent name="dk.seahawk.parser" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dk.seahawk.scanner" />
@@ -112,13 +124,67 @@
       <workItem from="1664476983542" duration="6584000" />
       <workItem from="1665052986959" duration="623000" />
       <workItem from="1665058128659" duration="1680000" />
+      <workItem from="1665060004456" duration="9000" />
+      <workItem from="1665242990192" duration="1855000" />
+      <workItem from="1665567919377" duration="3314000" />
+      <workItem from="1665646777873" duration="852000" />
+      <workItem from="1665678560785" duration="11000" />
+      <workItem from="1665678581111" duration="26000" />
+      <workItem from="1665678617084" duration="2061000" />
+      <workItem from="1666270978090" duration="3049000" />
+      <workItem from="1666278176140" duration="3266000" />
+      <workItem from="1666344386524" duration="25305000" />
+      <workItem from="1666432848102" duration="4505000" />
+      <workItem from="1666698161804" duration="6703000" />
+      <workItem from="1666859055174" duration="4941000" />
+      <workItem from="1666871651402" duration="4054000" />
+      <workItem from="1667463280070" duration="2950000" />
+      <workItem from="1667475376131" duration="2472000" />
+      <workItem from="1667478581694" duration="6110000" />
+      <workItem from="1667509079029" duration="909000" />
+      <workItem from="1667727839893" duration="60000" />
+      <workItem from="1668252907209" duration="7000" />
+      <workItem from="1668253162520" duration="18186000" />
+      <workItem from="1668375371201" duration="934000" />
+      <workItem from="1668609396936" duration="8938000" />
+      <workItem from="1668687751311" duration="7692000" />
+      <workItem from="1668701004529" duration="1901000" />
+      <workItem from="1668937546875" duration="4000" />
+      <workItem from="1669108406170" duration="8468000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java</url>
+          <line>347</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java</url>
+          <line>307</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
