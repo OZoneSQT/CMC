@@ -1,7 +1,6 @@
 package dk.seahawk.parser.ast.terminal;
 
 import dk.seahawk.checker.IVisitor;
-import dk.seahawk.parser.ast.expression.CallExpression;
 
 public class BoolType extends Terminal {
 

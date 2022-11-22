@@ -17,8 +17,8 @@ public class Program extends AST {
         return block;
     }
 
-    public void setProgram(Block block) {
-        this.block = block;
+    public Block getBlock() {
+        return block;
     }
 
     @Override
