@@ -19,16 +19,16 @@ public class Checker implements IChecker, IVisitor {
         this.errorHandler = errorHandler;
     }
 
-    //TODO
+
     @Override
     public void check( Program program ) {
-        program.visitProgram( this, null );
+        visitProgram( program, null );
     }
 
     @Override
     public Object visitProgram(Program program, Object arg) {
         idTable.openScope();
-        program.visitProgram( this, null );
+        program.visit( this, null );
         idTable.closeScope();
 
         return null;

@@ -1,5 +1,6 @@
 package dk.seahawk.parser.ast.declaration;
 
+import dk.seahawk.checker.Address;
 import dk.seahawk.checker.IVisitor;
 import dk.seahawk.parser.ast.expression.Expression;
 import dk.seahawk.parser.ast.terminal.Block;
@@ -11,6 +12,8 @@ public class FunctionDeclaration extends Declaration {
     private DeclarationList params;
     private Block block;
     private Expression retExp;
+    public Address address;
+
 
     public FunctionDeclaration( Identifier name, DeclarationList params, Block block, Expression retExp ) {
         this.name = name;
@@ -49,6 +52,14 @@ public class FunctionDeclaration extends Declaration {
 
     public void setRetExp(Expression retExp) {
         this.retExp = retExp;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override

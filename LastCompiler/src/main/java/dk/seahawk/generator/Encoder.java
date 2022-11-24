@@ -69,8 +69,7 @@ public class Encoder {
         Machine.code[address].d = displacement;
     }
 
-    public int displayRegister( int currentLevel, int entityLevel )
-    {
+    public int displayRegister( int currentLevel, int entityLevel ) {
         if( entityLevel == 0 )
             return Machine.SBr;
         else if( currentLevel - entityLevel <= 6 )
