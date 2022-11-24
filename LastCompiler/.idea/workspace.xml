@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Encoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/READ ME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/FunctionDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/declaration/VariableDeclaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ast/terminal/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/return-add-two-integeres-should-it-fail.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/return-add-two-integeres-should-it-fail.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\CMC\LastCompiler\src\main\java\examplefiles\expect_parser_error" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dk.seahawk.checker" />

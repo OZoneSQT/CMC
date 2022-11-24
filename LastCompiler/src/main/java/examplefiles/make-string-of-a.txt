@@ -1,15 +1,15 @@
 {
-char c = a;
-array[int] string = [ ];
+    char c = a;
+    array[int] string = [ ];
 
-main () {
-    int i = 0;
+    main () {
+        int i = 0;
 
-    if(i < 5) {
-        string.add(i, c);
-        i.add(i, 1);
+        if(i < 5) {
+            string.add(i, c);
+            i = i + 1;
+        }
+
+        print(string);
     }
-
-    print(string);
-}
 }

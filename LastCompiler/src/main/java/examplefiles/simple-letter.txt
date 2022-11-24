@@ -1,3 +1,5 @@
-{main () {
-    print(abc.);
-}}
+{
+    main () {
+        print(abc.);
+    }
+}

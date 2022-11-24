@@ -7,7 +7,7 @@ main () {
 
     if(i < 5) {
         string.add(i, c);
-        i.add(i, 1);
+        i = i + 1;
     } else {
         print(string);
     }

@@ -7,5 +7,5 @@ main () {
 }
 
 sub(a, b) {
-     print(a.add(b);
+     print(a + b;
 }}
