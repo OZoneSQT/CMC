@@ -1,9 +1,7 @@
 package dk.seahawk.checker;
 
-import dk.seahawk.parser.IParser;
 import dk.seahawk.parser.ast.Program;
-import dk.seahawk.utils.IErrorHandler;
 
-public interface IChecker {
+public interface SemanticChecker {
     void check(Program program);
 }

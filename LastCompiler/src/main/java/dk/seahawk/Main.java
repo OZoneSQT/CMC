@@ -1,16 +1,16 @@
 package dk.seahawk;
 
 import dk.seahawk.checker.Checker;
-import dk.seahawk.checker.IChecker;
-import dk.seahawk.checker.ParserOperatorPrecedence;
+import dk.seahawk.checker.SemanticChecker;
+import dk.seahawk.checker.SyntaxParserOperatorPrecedence;
 import dk.seahawk.generator.Generator;
-import dk.seahawk.generator.IGenerator;
+import dk.seahawk.generator.CodeGenerator;
 import dk.seahawk.models.EToken;
 import dk.seahawk.models.Token;
 import dk.seahawk.parser.ASTViewer;
 import dk.seahawk.parser.ast.AST;
 import dk.seahawk.parser.ast.Program;
-import dk.seahawk.scanner.IScanner;
+import dk.seahawk.scanner.LexicalScanner;
 import dk.seahawk.scanner.Scanner;
 import dk.seahawk.utils.ErrorHandler;
 import dk.seahawk.utils.IErrorHandler;
@@ -48,7 +48,7 @@ public class Main {
                 understood by the lexical analyzer. It also removes lexical errors
                 (e.g., erroneous characters), comments, and white space.
              */
-            IScanner scanner = new Scanner(sourceHandler, errorHandler);
+            LexicalScanner scanner = new Scanner(sourceHandler, errorHandler);
 
             // Grammar, Syntax Analyzer
             /*
@@ -59,23 +59,24 @@ public class Main {
              */
             //IParser parser = new Parser(scanner, errorHandler);
             //IParser parser = new ParserAST(scanner, errorHandler);
-            ParserOperatorPrecedence parser = new ParserOperatorPrecedence( scanner );
+            SyntaxParserOperatorPrecedence parser = new SyntaxParserOperatorPrecedence( scanner );
 
             // Semantic Analyzer
             /*
                 It verifies the parse tree, whether it’s meaningful or not. It furthermore produces a verified parse tree.
                 It also does type checking, Label checking, and Flow control checking.
              */
-            IChecker checker = new Checker(errorHandler);
+            SemanticChecker checker = new Checker(errorHandler);
 
             // Code Generator
-            IGenerator generator = new Generator(errorHandler);
+            CodeGenerator generator = new Generator(errorHandler);
 
             /*  Additional steps:
                 - Code Optimization
                 - Target Code Generator
              */
 
+            //Program is used as a container for the program/code
             Program program = (Program) parser.parseProgram();
             Token token = scanner.scan();
             if ( debugMode ) consoleLogger(token, scanner);
@@ -98,7 +99,7 @@ public class Main {
     }
 
     // Log to console
-    private static void consoleLogger(Token token, IScanner scanner ) {
+    private static void consoleLogger(Token token, LexicalScanner scanner ) {
         while (token.token != EToken.EOT) {
             System.out.println(token.token + " " + token.spelling);
             token = scanner.scan();
@@ -110,7 +111,7 @@ public class Main {
     }
 
     // Get path and filename to output file
-    private static void exportProgram(IGenerator generator, JFileChooser jFileChooser) {
+    private static void exportProgram(CodeGenerator generator, JFileChooser jFileChooser) {
         String sourceName = jFileChooser.getSelectedFile().getAbsolutePath();
         String targetName;
         if ( sourceName.endsWith(".txt") ) {

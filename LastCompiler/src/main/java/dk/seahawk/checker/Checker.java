@@ -1,6 +1,5 @@
 package dk.seahawk.checker;
 
-import dk.seahawk.parser.IParser;
 import dk.seahawk.parser.ast.Program;
 import dk.seahawk.parser.ast.declaration.*;
 import dk.seahawk.parser.ast.expression.*;
@@ -10,7 +9,7 @@ import dk.seahawk.utils.IErrorHandler;
 
 import java.util.Vector;
 
-public class Checker implements IChecker, IVisitor {
+public class Checker implements SemanticChecker, IVisitor {
 
     private IErrorHandler errorHandler;
     private IdentificationTable idTable = new IdentificationTable();

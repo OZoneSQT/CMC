@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/SemanticChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/ParserOperatorPrecedence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/SyntaxParserOperatorPrecedence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/IGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/LexicalScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/letter.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/return-add-two-integeres-should-it-fail.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/expect_parser_error/return-add-two-integeres-should-it-fail.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-digit.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/with-comment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/checker/ICheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/checker/SemanticCheckerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/generator/IGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/generator/CodeGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/IScannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/LexicalScannerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -10,7 +10,7 @@ import dk.seahawk.parser.ast.statement.*;
 import dk.seahawk.parser.ast.terminal.*;
 import dk.seahawk.utils.IErrorHandler;
 
-public final class Generator implements IGenerator, IVisitor {
+public final class Generator implements CodeGenerator, IVisitor {
 
     private IErrorHandler errorHandler;
     private Encoder encoder;

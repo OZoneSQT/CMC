@@ -8,7 +8,7 @@ import dk.seahawk.parser.ast.declaration.*;
 import dk.seahawk.parser.ast.expression.*;
 import dk.seahawk.parser.ast.statement.*;
 import dk.seahawk.parser.ast.terminal.*;
-import dk.seahawk.scanner.IScanner;
+import dk.seahawk.scanner.LexicalScanner;
 import dk.seahawk.utils.IErrorHandler;
 
 import static dk.seahawk.models.EToken.*;
@@ -46,11 +46,11 @@ import static dk.seahawk.models.EToken.SEMICOLON;
  */
 
 public class ParserAST implements IParser {
-    private IScanner scan;
+    private LexicalScanner scan;
     private IErrorHandler errorHandler;
     private Token currentTerminal;
 
-    public ParserAST(IScanner scan, IErrorHandler errorHandler) {
+    public ParserAST(LexicalScanner scan, IErrorHandler errorHandler) {
         this.scan = scan;
         this.errorHandler = errorHandler;
     }

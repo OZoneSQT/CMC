@@ -1,12 +1,11 @@
-package dk.seahawk.scanner;
+package dk.seahawk.checker;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class IScannerTest {
+class SemanticCheckerTest {
 
     @BeforeEach
     void setUp() {
@@ -15,13 +14,4 @@ class IScannerTest {
     @AfterEach
     void tearDown() {
     }
-
-    @Test
-    void scanner() {
-    }
-
-    @Test
-    void scan() {
-    }
-
 }
