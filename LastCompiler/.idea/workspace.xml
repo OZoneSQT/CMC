@@ -6,24 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6dc2de6-4135-493a-826e-31c8f436f165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/IChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/SemanticChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/ParserOperatorPrecedence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/checker/SyntaxParserOperatorPrecedence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/IGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/generator/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/parser/ParserAST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/IScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/LexicalScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dk/seahawk/scanner/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/add-two-integers-with-sub.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else-nester.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/if-else.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/make-string-of-a.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examplefiles/simple-letter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/checker/ICheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/checker/SemanticCheckerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/generator/IGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/generator/CodeGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/IScannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dk/seahawk/scanner/LexicalScannerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +52,12 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_directory_selection&quot;: &quot;E:/GitHub/CMC/LastCompiler/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Extended-Triangle-Compiler&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/Extended-Triangle-Compiler&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -163,7 +150,10 @@
       <workItem from="1668687751311" duration="7692000" />
       <workItem from="1668701004529" duration="1901000" />
       <workItem from="1668937546875" duration="4000" />
-      <workItem from="1669108406170" duration="8468000" />
+      <workItem from="1669108406170" duration="8579000" />
+      <workItem from="1669277663093" duration="600000" />
+      <workItem from="1671725229696" duration="2072000" />
+      <workItem from="1671783051559" duration="659000" />
     </task>
     <servers />
   </component>
