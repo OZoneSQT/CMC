@@ -4,14 +4,12 @@
         int i = 0;
 
         if(i < 5) {
-            i.add(i, 1);
+        
             print(i);
+            i = i + 1;
         } else {
             if(i = 5) {
                     print(i);
-                    i.add(i, 1);
-            } else {
-                print(i);
             }
         }
     }

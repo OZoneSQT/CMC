@@ -8,7 +8,7 @@ import dk.seahawk.utils.SourceHandler;
 import static dk.seahawk.models.EToken.*;
 
 
-public class Scanner implements IScanner {
+public class Scanner implements LexicalScanner {
     private SourceHandler source;
     private IErrorHandler errorHandler;
 

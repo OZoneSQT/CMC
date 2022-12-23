@@ -1,7 +1,7 @@
 {
-    char c = a;
 
-    array[int] string = [ ];
+    char c = "a";
+    array[6] string = [ ];
 
     main () {
         int i = 0;

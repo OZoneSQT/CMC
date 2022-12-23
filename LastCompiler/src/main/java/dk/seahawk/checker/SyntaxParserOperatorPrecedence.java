@@ -10,16 +10,16 @@ import dk.seahawk.parser.ast.declaration.VariableDeclaration;
 import dk.seahawk.parser.ast.expression.*;
 import dk.seahawk.parser.ast.statement.*;
 import dk.seahawk.parser.ast.terminal.*;
-import dk.seahawk.scanner.IScanner;
+import dk.seahawk.scanner.LexicalScanner;
 import dk.seahawk.scanner.Scanner;
 
 import static dk.seahawk.models.EToken.*;
 
-public class ParserOperatorPrecedence {
+public class SyntaxParserOperatorPrecedence {
     private Scanner scan;
     private Token currentTerminal;
 
-    public ParserOperatorPrecedence(IScanner scanner) {
+    public SyntaxParserOperatorPrecedence(LexicalScanner scanner) {
         this.scan = (Scanner) scanner;
         currentTerminal = scanner.scan();
     }

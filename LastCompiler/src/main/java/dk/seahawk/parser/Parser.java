@@ -2,7 +2,7 @@ package dk.seahawk.parser;
 
 import dk.seahawk.models.*;
 import dk.seahawk.parser.ast.AST;
-import dk.seahawk.scanner.IScanner;
+import dk.seahawk.scanner.LexicalScanner;
 import dk.seahawk.utils.IErrorHandler;
 
 import static dk.seahawk.models.EToken.*;
@@ -40,11 +40,11 @@ import static dk.seahawk.models.EToken.*;
 
 // Recursive Descent Parser
 public class Parser implements IParser {
-    private IScanner scan;
+    private LexicalScanner scan;
     private IErrorHandler errorHandler;
     private Token currentTerminal;
 
-    public Parser(IScanner scan, IErrorHandler errorHandler) {
+    public Parser(LexicalScanner scan, IErrorHandler errorHandler) {
         this.scan = scan;
         this.errorHandler = errorHandler;
     }
