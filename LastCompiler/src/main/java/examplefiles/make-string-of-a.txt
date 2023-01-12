@@ -1,4 +1,5 @@
 {
+
     char c = "a";
     array[6] string = [ ];
 
